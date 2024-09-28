@@ -7,6 +7,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/shared/icons'
 
 import { Badge } from '../ui/badge'
+import GradualSpacing from '../ui/gradual-spacing'
 
 export default async function HeroLanding() {
   return (
@@ -15,7 +16,7 @@ export default async function HeroLanding() {
         <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
           Kickboxing & Martial Arts Club
         </Badge>
-
+        <GradualSpacing className='h-4' text='Nerds Fighting' />
         <h1 className='text-balance font-urban text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-[66px]'>
           Kick off with a bang with{' '}
           <span className='text-gradient_indigo-purple font-extrabold'>

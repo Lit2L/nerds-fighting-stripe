@@ -1,5 +1,5 @@
-import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { createEnv } from '@t3-oss/env-nextjs'
+import { z } from 'zod'
 
 export const env = createEnv({
   server: {
@@ -44,5 +44,5 @@ export const env = createEnv({
     //   process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
     // NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID:
     //   process.env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID,
-  },
-});
+  }
+})

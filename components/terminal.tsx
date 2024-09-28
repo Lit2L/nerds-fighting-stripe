@@ -11,9 +11,9 @@ export function Terminal() {
   const terminalSteps = [
     'Run Start...',
     'Debugging-Limits.exe',
-    'Upgrade-Body.push',
-    'Hack-Courage.go',
-    'Optimize.Confidence.lvl'
+    'Upgrading-Body',
+    'Hacking-Mindset',
+    'Optimizing.Confidence.lvl'
   ]
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export function Terminal() {
             )}
           </button> */}
         {/* </div> */}
-        <div className='font-heading relative mx-auto w-full space-y-1 p-1'>
+        <div className='font-heading relative mx-auto w-full space-y-1 p-1 tracking-wide'>
           {/* <div className='absolute -z-10 opacity-50'>
             <Logo />
           </div> */}

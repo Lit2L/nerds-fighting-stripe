@@ -13,7 +13,7 @@ export const fontUrban = Urbanist({
 
 export const fontHeading = localFont({
   src: './CalSans-SemiBold.woff2',
-  variable: '--font-heading'
+  variable: '--font-headings'
 })
 
 export const fontGeist = localFont({
@@ -21,10 +21,10 @@ export const fontGeist = localFont({
   variable: '--font-geist'
 })
 
-export const fontBlackOps = Black_Ops_One({
+export const headingFont = Black_Ops_One({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-black-ops'
+  variable: '--font-heading'
 })
 
 export const logoFont = localFont({

@@ -1,11 +1,11 @@
 import '@/styles/globals.css'
 
 import {
-  fontBlackOps,
   fontGeist,
   fontHeading,
   fontSans,
   fontUrban,
+  headingFont,
   logoFont
 } from '@/assets/fonts'
 import { SessionProvider } from 'next-auth/react'
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontUrban.variable,
           fontHeading.variable,
           fontGeist.variable,
-          fontBlackOps.variable,
+          headingFont.variable,
           logoFont.className
         )}
       >

@@ -18,6 +18,7 @@ import { Icons } from '@/components/shared/icons'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 
 import Logo from '../Logo'
+import { ModeToggle } from '../ui/mode-toggle'
 
 interface NavBarProps {
   scroll?: boolean
@@ -41,16 +42,16 @@ export function NavBar({ scroll = false }: NavBarProps) {
 
   return (
     <header
-      className={`sticky top-0 z-40 flex w-full justify-center bg-background/60 backdrop-blur-xl transition-all ${
-        scroll ? (scrolled ? 'border-b' : 'bg-transparent') : 'border-b'
+      className={`sticky top-0 z-40 flex w-full justify-center backdrop-blur-xl transition-all ${
+        scroll ? (scrolled ? 'border-b' : '') : 'border-b'
       }`}
     >
       <MaxWidthWrapper
-        className='flex h-16 items-center justify-between py-4'
+        className='items-bg-center flex h-20 w-full justify-between'
         large={documentation}
       >
         <div className='flex gap-6 md:gap-10'>
-          <Link href='/' className='flex size-16 items-center space-x-1.5'>
+          <Link href='/' className='flex size-20 items-center space-x-1.5'>
             <Logo />
           </Link>
 
@@ -62,7 +63,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                   href={item.disabled ? '#' : item.href}
                   prefetch={true}
                   className={cn(
-                    'font-heading flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm',
+                    'flex items-center font-sans text-2xl font-black transition-colors hover:text-foreground/80 sm:text-sm',
                     item.href.startsWith(`/${selectedLayout}`)
                       ? 'text-foreground'
                       : 'text-foreground/60',
@@ -74,6 +75,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
               ))}
             </nav>
           ) : null}
+          <ModeToggle />
         </div>
 
         <div className='flex items-center space-x-3'>

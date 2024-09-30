@@ -6,7 +6,7 @@ const {
 } = require('tailwindcss/lib/util/flattenColorPalette')
 
 const config = {
-  darkMode: 'class',
+  darkMode: ['class', 'class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -27,7 +27,9 @@ const config = {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         heading: ['var(--font-heading)', ...fontFamily.sans],
         logo: ['var(--font-logo)', ...fontFamily.sans],
-        geist: ['var(--font-geist)', ...fontFamily.sans]
+        cal: ['var(--font-cal-sans)', ...fontFamily.sans],
+        kronaOne: ['var(--font-krona-one)', ...fontFamily.sans],
+        genos: ['var(--font-genos)', ...fontFamily.sans]
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -71,17 +73,34 @@ const config = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
+          from: {
+            height: '0'
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)'
+          }
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
+          from: {
+            height: 'var(--radix-accordion-content-height)'
+          },
+          to: {
+            height: '0'
+          }
+        },
+        grid: {
+          '0%': {
+            transform: 'translateY(-50%)'
+          },
+          '100%': {
+            transform: 'translateY(0)'
+          }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        grid: 'grid 25s linear infinite'
       }
     }
   },

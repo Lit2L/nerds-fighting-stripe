@@ -10,12 +10,17 @@ import Logo from '../Logo'
 import { Terminal } from '../terminal'
 import { Badge } from '../ui/badge'
 import GradualSpacing from '../ui/gradual-spacing'
+import RetroGrid from '../ui/retro-grid'
 
 export default async function HeroLanding() {
   return (
-    <section className='min-h-screen space-y-6 bg-[radial-gradient(circle_500px_at_50%_450px,#181818,transparent)] py-12 sm:py-20 lg:py-20'>
-      <div className='container flex max-w-5xl flex-col items-center gap-5 text-center'>
-        <Badge className='md:text-md font-heading rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
+    <section
+      id='hero'
+      className='flex min-h-screen flex-col justify-center space-y-6 bg-[radial-gradient(circle_500px_at_50%_450px,#181818,transparent)]'
+    >
+      <RetroGrid />
+      <div className='container flex h-full w-full max-w-5xl flex-col items-center space-y-12 text-center'>
+        <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
           Kickboxing & Martial Arts Club
         </Badge>
         <GradualSpacing

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { TrialClassForm } from '../forms/trial-class-form'
 
-export default function NewClientFormSection() {
+export default function NewClientSection() {
   return (
     <>
       <div className='relative my-24 bg-black/20 font-genos text-foreground'>

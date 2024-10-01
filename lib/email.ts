@@ -2,12 +2,12 @@ import { MagicLinkEmail } from '@/emails/magic-link-email'
 import { EmailConfig } from 'next-auth/providers/email'
 import { Resend } from 'resend'
 
-// import { env } from "@/env.mjs";
+import { env } from '@/env.mjs'
 import { siteConfig } from '@/config/site'
 
 import { getUserByEmail } from './user'
 
-export const resend = new Resend(process.env.RESEND_API_KEY)
+export const resend = new Resend(env.RESEND_API_KEY)
 
 export const sendVerificationRequest: EmailConfig['sendVerificationRequest'] =
   async ({ identifier, url, provider }) => {
@@ -23,9 +23,7 @@ export const sendVerificationRequest: EmailConfig['sendVerificationRequest'] =
       const { data, error } = await resend.emails.send({
         from: provider.from,
         to:
-          process.env.NODE_ENV === 'development'
-            ? 'delivered@resend.dev'
-            : identifier,
+          env.NODE_ENV === 'development' ? `delivered@resend.dev` : identifier,
         subject: authSubject,
         react: MagicLinkEmail({
           firstName: user?.name as string,
@@ -44,7 +42,7 @@ export const sendVerificationRequest: EmailConfig['sendVerificationRequest'] =
         throw new Error(error?.message)
       }
 
-      // console.log(data)
+      console.log(data)
     } catch (error) {
       throw new Error('Failed to send verification email.')
     }

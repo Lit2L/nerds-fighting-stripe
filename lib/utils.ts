@@ -3,7 +3,7 @@ import { clsx, type ClassValue } from 'clsx'
 import ms from 'ms'
 import { twMerge } from 'tailwind-merge'
 
-// import { env } from '@/env.mjs'
+import { env } from '@/env.mjs'
 import { siteConfig } from '@/config/site'
 
 export function cn(...inputs: ClassValue[]) {
@@ -80,7 +80,7 @@ export function formatDate(input: string | number): string {
 }
 
 export function absoluteUrl(path: string) {
-  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
+  return `${env.NEXT_PUBLIC_APP_URL}${path}`
 }
 
 // Utils from precedent.dev

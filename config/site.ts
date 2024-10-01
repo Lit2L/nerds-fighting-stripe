@@ -1,15 +1,14 @@
 import { HomeLinks, SidebarNavItem, SiteConfig } from 'types'
+import { env } from '@/env.mjs'
 
-// import { env } from "@/env.mjs";
-
-const site_url = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+const site_url = env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
 export const siteConfig: SiteConfig = {
   name: 'Nerds Fighting',
   description:
     'Nerds Fighting is a Muay Thai gym located in Huntington Beach/Fountain Valley, CA. We offer classes for all levels, from beginners to advanced. Our classes are designed to help you get in shape, build confidence, and learn self-defense.',
   url: site_url,
-  address: `8780 Warner Ave, suite 7
+  address: `8780 Warner Ave, Suite 7
   Fountain Valley, CA 92708`,
   phone: `(714) 866-6926`,
   locationName: 'Williams MMA - Martial Arts Academy',

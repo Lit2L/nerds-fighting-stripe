@@ -27,7 +27,7 @@ export const Footer = () => {
             </Link>
             . Located at{' '}
             <Link
-              href='https://williamsmma.com'
+              href='https://www.williamsmma.com/contact.html'
               target='_blank'
               rel='noreferrer'
               className='underline-offset-6 font-medium underline'

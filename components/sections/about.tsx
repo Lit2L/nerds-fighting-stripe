@@ -39,7 +39,7 @@ const featureCards = [
       'Join a supportive community of martial artists. Enjoy daily group sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more, all designed to help you reach your peak performance.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/wesdaypose.jpeg',
-    icon: <GiYinYang className='size-6 text-white' />,
+    icon: <GiYinYang className='size-6 text-black dark:text-white' />,
     href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   },
   {
@@ -68,7 +68,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='py- container relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)]'
+      className='container relative my-36 min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)]'
     >
       <div className=''>
         {/* <h2 className='my-1 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
@@ -96,15 +96,9 @@ export const About = () => {
                   <span className='font-heading text-lg leading-8 text-emerald-500'>
                     Nerds Fighting
                   </span>{' '}
-                  began with the idea that no matter how wierd you think you are
-                  or how nerdy you think your hobbies and interests might be,
-                  everyone should be able to live life with less fear and with
-                  the confidence of a fighter. Muay Thai training inherantly
-                  contains wisdom, skill, and many important life lessons that
-                  would be difficult to replicate for other avenues. So whether
-                  you&apos;re a book worm, a business owner, a mom, a dad, a
-                  student, or a nerd... we want to invite you to our martial
-                  arts club and we hope to see you soon.
+                  started with the idea that everyone no matter where you come
+                  from or how wierd you think you are, you deserve or how nerdy
+                  you think your hobbies are with less fear. Training
                   {/* The road is challenging but
                   the skills and the lessons you learn about yourself are
                   contain lessons have the powermany lessons that teach you
@@ -126,7 +120,7 @@ export const About = () => {
               className='flex flex-col items-center justify-center'
             >
               {card.id % 2 === 0 ? (
-                <Card className='flex w-full max-w-4xl flex-col items-center justify-center gap-16 bg-transparent md:flex-row'>
+                <div className='flex w-full max-w-4xl flex-col items-center justify-center gap-16 bg-transparent md:flex-row'>
                   <div className='flex items-center justify-center md:w-[350px]'>
                     <AspectRatio ratio={4 / 3}>
                       <Image
@@ -149,13 +143,13 @@ export const About = () => {
                       <h3 className='text-md font-heading'>{card.title}</h3>
                     </div>
 
-                    <p className='ml-6 w-[300px] font-cal text-sm font-light leading-6 text-white'>
+                    <p className='ml-6 w-[300px] font-cal text-sm font-light leading-6'>
                       {card.description}
                     </p>
                   </div>
-                </Card>
+                </div>
               ) : (
-                <Card className='flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-16 bg-transparent md:flex-row'>
+                <div className='flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-16 bg-transparent md:flex-row'>
                   <div className='flex w-[350px] flex-col space-y-3'>
                     <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-emerald-900 shadow-lg shadow-red-900 sm:tracking-wide'>
                       {card.info}
@@ -165,7 +159,7 @@ export const About = () => {
                       <h3 className='text-md font-heading'>{card.title}</h3>
                     </div>
 
-                    <p className='w-[300px] font-cal text-sm font-light leading-6 text-white'>
+                    <p className='w-[300px] font-cal text-sm font-light leading-6'>
                       {card.description}
                     </p>
                   </div>
@@ -180,7 +174,7 @@ export const About = () => {
                       />
                     </AspectRatio>
                   </div>
-                </Card>
+                </div>
               )}
             </div>
           ))}

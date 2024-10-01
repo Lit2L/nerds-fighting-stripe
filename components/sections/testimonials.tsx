@@ -15,7 +15,6 @@ export default function Testimonials() {
 
         <div className='columns-2 gap-5 space-y-5 md:columns-2'>
           {testimonials.map((item) => (
-            // <div className='break-inside-avoid' key={item.name}>
             <div className='break-inside-avoid' key={item.name}>
               <div className='relative rounded-xl border bg-muted/25'>
                 <div className='flex flex-col px-4 py-5 sm:p-6'>

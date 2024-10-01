@@ -7,10 +7,14 @@ export type SiteConfig = {
   name: string
   description: string
   url: string
+  locationName: string
+  address: string
+  phone: string
+  email: string
   ogImage: string
   mailSupport: string
   links: {
-    twitter: string
+    williamsMma: string
     github: string
   }
 }
@@ -38,6 +42,17 @@ export type SidebarNavItem = {
   icon?: keyof typeof Icons
 }
 
+export type HomeItems = {
+  name: string
+  href: string
+  address: string
+  phone: string
+}
+
+export type HomeLinks = {
+  title: string
+  items: HomeItems[]
+}
 export type DocsConfig = {
   mainNav: MainNavItem[]
   sidebarNav: SidebarNavItem[]

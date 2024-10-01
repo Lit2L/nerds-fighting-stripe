@@ -83,7 +83,7 @@ export function Schedule() {
       <div className='pb-6 pt-28 font-sans'>
         <MaxWidthWrapper>
           <HeaderSection
-            label='Up to date 9-29-2024'
+            label='Updated since 10-1-2024'
             title='Muay Thai Schedule'
             subtitle=''
           />
@@ -93,7 +93,7 @@ export function Schedule() {
               classes.map((item) => (
                 <Card
                   key={item.id}
-                  className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-gray-800/40'
+                  className='dark:shadow-neutral-800/ flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-neutral-500/70 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-neutral-600/20'
                 >
                   <CardTitle className='p-1'>
                     <div className='flex items-center justify-between gap-3'>
@@ -120,7 +120,7 @@ export function Schedule() {
                             {schedule.time}
                           </span>
 
-                          <p className='w-3/16 text-md font-genos m-1 flex font-semibold capitalize tracking-wide text-white dark:text-green-500'>
+                          <p className='w-3/16 text-md m-1 flex font-genos font-semibold capitalize tracking-wide text-white dark:text-green-500'>
                             {item.description}
                           </p>
                         </div>
@@ -130,11 +130,10 @@ export function Schedule() {
                   <div className='mt-2 flex w-full flex-1 flex-col items-end justify-between'>
                     <span className='flex w-full items-center justify-between'>
                       <GiPunchingBag className='size-6 text-red-500' />
-                      <p className='font-genos ml-3 text-xs font-semibold tracking-wide text-white dark:text-gray-300'>
+                      <p className='ml-3 font-genos text-xs font-semibold tracking-wide text-white dark:text-gray-300'>
                         {item.attributes}
                       </p>
                     </span>
-                    {/* <AnimatedJoinButton /> */}
                   </div>
                 </Card>
               ))}

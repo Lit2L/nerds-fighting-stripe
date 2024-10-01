@@ -12,7 +12,7 @@ datasource db {
 
 enum UserRole {
   ADMIN
-  USER
+  USER // Default role
 }
 
 model Account {

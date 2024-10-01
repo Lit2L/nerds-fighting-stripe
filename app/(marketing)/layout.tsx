@@ -1,6 +1,6 @@
+import { Footer } from '@/components/layout/footer'
 import { NavMobile } from '@/components/layout/mobile-nav'
 import { NavBar } from '@/components/layout/navbar'
-import { SiteFooter } from '@/components/layout/site-footer'
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -8,7 +8,7 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='flex min-h-screen flex-col'>
+    <div className='flex min-h-screen w-full flex-col'>
       <header className='fixed inset-x-0 top-0 z-40 h-20 bg-gradient-to-bl from-emerald-500/90 via-emerald-400/70 to-emerald-600/95'>
         <div className='flex items-center justify-center sm:justify-between'>
           <NavMobile />
@@ -16,7 +16,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
         </div>
       </header>
       <main className='flex-1'>{children}</main>
-      <SiteFooter />
+      <Footer />
     </div>
   )
 }

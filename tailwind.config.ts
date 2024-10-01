@@ -32,6 +32,19 @@ const config = {
         genos: ['var(--font-genos)', ...fontFamily.sans]
       },
       colors: {
+        dark: {
+          50: '#e5e5e5',
+          100: '#dadada',
+          200: '#b5b5b5',
+          300: '#8f8f8f',
+          400: '#6a6a6a',
+          500: '#454545',
+          600: '#373737',
+          700: '#292929',
+          800: '#1c1c1c',
+          900: '#0e0e0e',
+          950: '#070707'
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

@@ -92,7 +92,7 @@ export const About = () => {
             </h3>
             <div className='my-12 h-full max-w-2xl rounded-3xl border border-gray-500/20 bg-zinc-900/70 drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='md:text-md font-genos p-3 text-lg font-semibold leading-8 text-white dark:text-white'>
+                <p className='md:text-md p-3 font-genos text-lg font-semibold leading-8 text-white dark:text-white'>
                   <span className='font-heading text-lg leading-8 text-emerald-500'>
                     Nerds Fighting
                   </span>{' '}

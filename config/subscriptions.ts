@@ -19,8 +19,8 @@ export const pricingData: SubscriptionPlan[] = [
       yearly: 0
     },
     stripeIds: {
-      monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID,
-      yearly: env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PLAN_ID
+      monthly: env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID,
+      yearly: env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID
     }
   },
   {
@@ -36,11 +36,11 @@ export const pricingData: SubscriptionPlan[] = [
     limitations: [],
     prices: {
       monthly: 25,
-      yearly: 0
+      yearly: 25
     },
     stripeIds: {
-      monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
-      yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID
+      monthly: env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID,
+      yearly: env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID
     }
   },
   {
@@ -60,7 +60,7 @@ export const pricingData: SubscriptionPlan[] = [
       'Limited access to business resources.'
     ],
     prices: {
-      monthly: 125,
+      monthly: 100,
       yearly: 1200
     },
     stripeIds: {

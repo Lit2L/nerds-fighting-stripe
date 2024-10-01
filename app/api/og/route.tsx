@@ -101,9 +101,6 @@ export async function GET(req: Request) {
                   strokeLinejoin='round'
                 />
               </svg>
-              <div tw='flex ml-2'>
-                github.com/mickasmt/next-saas-stripe-starter
-              </div>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export const sendVerificationRequest: EmailConfig['sendVerificationRequest'] =
 
     try {
       const { data, error } = await resend.emails.send({
-        from: provider.from,
+        from: provider.from!,
         to:
           env.NODE_ENV === 'development' ? `delivered@resend.dev` : identifier,
         subject: authSubject,

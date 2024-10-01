@@ -1,13 +1,6 @@
 import '@/styles/globals.css'
 
-import {
-  fontCalSans,
-  fontSans,
-  genosFont,
-  headingFont,
-  kronaOne,
-  logoFont
-} from '@/assets/fonts'
+import { fontSans, genosFont, headingFont, logoFont } from '@/assets/fonts'
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from 'next-themes'
 
@@ -31,8 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn(
           'min-h-screen bg-background antialiased',
           fontSans.variable,
-          kronaOne.variable,
-          fontCalSans.variable,
+
           headingFont.variable,
           logoFont.className,
           genosFont.variable

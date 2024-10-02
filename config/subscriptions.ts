@@ -5,46 +5,47 @@ export const pricingData: SubscriptionPlan[] = [
     title: 'Trial Class(Free)',
     description: 'Free Trial Class',
     benefits: [
-      'Claim One Free Class',
-      'Try class before joining without any risk',
-      'No pressure to join'
+      'One Invite to Free Trial Class',
+      'No commitment required',
+      'No pressure to join',
+      'Invite a friend and receive one week of membership free'
     ],
-    limitations: [
-      'No custom branding',
-      'Limited access to business resources.'
-    ],
+    limitations: ['Limited to one free trial class per person'],
     prices: {
+      single: 0,
       monthly: 0,
       yearly: 0
     },
     stripeIds: {
+      single: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
       monthly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
       yearly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!
     }
   },
   {
-    title: 'Drop-in Class',
-    description: 'Allows for one drop-in Muay Thai class.',
+    title: 'Drop-ins',
+    description: 'Purchase one drop-in or select a package of classes.',
     benefits: [
-      'Access to one Muay Thai Class',
-      'Cardio and Strength Conditioning',
-      'Technique and Sparring drills',
-      'Bag and Pad work',
-      'Fitness and Weight Loss'
+      'Purchase One drop-in Class or a Package',
+      'Use anytime',
+      'Convenient for those who can only attend occasionally',
+      'No commitment required'
     ],
     limitations: [],
     prices: {
-      monthly: 25,
-      yearly: 25
+      single: 25,
+      monthly: 100,
+      yearly: 0
     },
     stripeIds: {
+      single: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
       monthly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
       yearly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!
     }
   },
   {
     title: 'Pro',
-    description: 'Get access to join in all Muay Thai classes.',
+    description: 'All members get access to all scheduled Muay thai classes. ',
     benefits: [
       'Access to all Muay Thai Classes',
       'Cardio and Strength Conditioning',
@@ -59,22 +60,19 @@ export const pricingData: SubscriptionPlan[] = [
       'Limited access to business resources.'
     ],
     prices: {
+      single: 25,
       monthly: 100,
       yearly: 1200
     },
     stripeIds: {
+      single: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
       monthly: process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID!,
       yearly: process.env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PLAN_ID!
     }
   }
 ]
 
-export const plansColumns = [
-  'starter',
-  'pro',
-  'business',
-  'enterprise'
-] as const
+export const plansColumns = ['Drop-ins', 'Pro'] as const
 
 export const comparePlans: PlansRow[] = [
   {

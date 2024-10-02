@@ -47,35 +47,35 @@ export function NavBar({ scroll = false }: NavBarProps) {
       }`}
     >
       <MaxWidthWrapper
-        className='items-bg-center flex h-20 w-full justify-between'
+        className='items-bg-center between flex h-20 w-full'
         large={documentation}
       >
-        <div className='flex gap-6 md:gap-10'>
+        <div className='mx-3 flex w-full flex-1 justify-between gap-6 px-3 md:gap-10'>
           <Link href='/' className='flex size-20 items-center space-x-1.5'>
             <Logo />
           </Link>
 
           {links && links.length > 0 ? (
-            <nav className='hidden gap-6 md:flex'>
+            <nav className='mr-6 hidden gap-6 md:flex md:space-x-6'>
               {links.map((item, index) => (
                 <Link
                   key={index}
                   href={item.disabled ? '#' : item.href}
                   prefetch={true}
                   className={cn(
-                    'flex items-center font-sans text-2xl font-black transition-colors hover:text-foreground/80 sm:text-sm',
+                    'text-md flex items-center font-heading tracking-tight text-white transition-colors duration-300 hover:text-white/50',
                     item.href.startsWith(`/${selectedLayout}`)
                       ? 'text-foreground'
-                      : 'text-foreground/60',
+                      : 'text-foreground',
                     item.disabled && 'cursor-not-allowed opacity-80'
                   )}
                 >
                   {item.title}
                 </Link>
               ))}
+              <ModeToggle />
             </nav>
           ) : null}
-          <ModeToggle />
         </div>
 
         <div className='flex items-center space-x-3'>

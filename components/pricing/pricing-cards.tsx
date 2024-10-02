@@ -138,8 +138,8 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
 
   return (
     <MaxWidthWrapper>
-      <section className='flex flex-col items-center text-center'>
-        <HeaderSection label='Pricing' title='Start at full speed !' />
+      <section className='mt-28 flex flex-col items-center rounded-sm border border-white/30 text-center'>
+        <HeaderSection label='Pricing' title='Join the Nerds Fighting Team!' />
 
         <div className='mb-4 mt-10 flex items-center gap-5'>
           <ToggleGroup

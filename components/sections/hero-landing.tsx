@@ -22,7 +22,7 @@ export default async function HeroLanding() {
           Kickboxing & Martial Arts Club
         </Badge>
         <GradualSpacing
-          className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]'
+          className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
           text='Nerds Fighting'
         />
         <Logo />

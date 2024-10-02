@@ -33,9 +33,9 @@ export default function GradualSpacing({
             exit='hidden'
             variants={framerProps}
             transition={{ duration, delay: i * delayMultiple }}
-            className={cn('drop-shadow-sm', className)}
+            className={cn('text-2xl drop-shadow-sm md:text-6xl', className)}
           >
-            {char === ' ' ? <span>&nbsp;</span> : char}
+            {char === '' ? <span>&nbsp;</span> : char}
           </motion.h1>
         ))}
       </AnimatePresence>

@@ -4,6 +4,12 @@ import { FaYinYang } from 'react-icons/fa'
 import { GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
 import { PiParkDuotone } from 'react-icons/pi'
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/components/ui/accordion'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
@@ -71,9 +77,6 @@ export const About = () => {
       className='container relative my-36 min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)]'
     >
       <div className=''>
-        {/* <h2 className='my-1 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          What Nerds?
-        </h2> */}
         <div className='relative flex translate-y-24 flex-col items-center justify-center'>
           <div className='absolute -top-10 z-10 opacity-90'>
             <Image
@@ -94,13 +97,22 @@ export const About = () => {
               <div className='flex flex-col items-center justify-center p-3 text-left'>
                 <p className='md:text-md p-3 font-genos text-lg leading-8 text-white dark:text-white'>
                   <span className='font-heading text-lg leading-8 text-emerald-500'>
-                    Nerds Fighting
+                    Nerds Fighting MTK
                   </span>{' '}
-                  started with the idea that we should all be able to get
-                  together a few times a week with some like-minded friends and
-                  train like fighters do. We welcome everyone We should live
-                  stronger, live healthier, live longer, live with confidence
-                  and live with less fear.
+                  began with the idea that everyone should live with real
+                  confidence in themselves and with less fear. We think this can
+                  be accomplished with Muay Thai Kickboxing. <br />
+                  <br />
+                  Any kind of workout is a great workout but given a little time
+                  to develop some technique and conditioning then no other
+                  workout is funner and more rewarding than Muay Thai
+                  Kickboxing.
+                  {/* Kickboxing. Cracking the heavy bag with a roundkick or snapping punches on
+                  focus mitts next to others doing the same that leaves you
+                  feeling peaceful and calm with a We believe that workouts
+                  should also provide you with a new skill or a higher level of
+                  confidence that you carry outside of the gym and with you for
+                  the rest of your life. */}
                 </p>
               </div>
             </div>

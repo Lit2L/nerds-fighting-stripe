@@ -99,16 +99,6 @@ export const features: FeatureLdg[] = [
 
 export const testimonials: TestimonialType[] = [
   {
-    name: 'Qua W.',
-    job: 'Business Owner',
-    image: '/_static/avatars/qua-yelp.jpg',
-    review: `Larry's kickboxing classes at Nerds Fighting are seriously something else. He's got this way of breaking down martial arts that makes it super approachable for everyone. You walk in, and whether you're new or you've been doing this for years, you immediately feel welcome. The whole "meathead" stereotype? Yeah, that's not a thing here.
-
-      Larry's built this space where you can geek out about technique like you're analyzing a Starcraft match, and then jump into sparring like you're Saenchai in a Muay Thai training camp. It's crazy--one minute you're talking Magic the Gathering, and the next you're trading kicks. What makes this place special is how it blends martial arts with nerd culture in a way that just works.
-
-      Everyone, no matter their age or background, feels like they belong here. It's not just about getting in shape; it's about the community. If you want a place where you can be yourself, talk nerdy, and still train hard, Nerds Fighting is the spot. I highly recommend!`
-  },
-  {
     name: 'Thai L.',
     job: 'Entrepreneur',
     image: '/_static/avatars/thai-yelp.jpg',
@@ -119,7 +109,18 @@ export const testimonials: TestimonialType[] = [
     job: 'Marketing Manager',
     image: '/_static/avatars/shadcn.jpeg',
     review: `Coach Larry is awesome. He breaks it down in simple yet effective techniques that builds confidence. What I like most about the class are the students. No ego, friendly, and fun.`
+  },
+  {
+    name: 'Qua W.',
+    job: 'Business Owner',
+    image: '/_static/avatars/qua-yelp.jpg',
+    review: `Larry's kickboxing classes at Nerds Fighting are seriously something else. He's got this way of breaking down martial arts that makes it super approachable for everyone. You walk in, and whether you're new or you've been doing this for years, you immediately feel welcome. The whole "meathead" stereotype? Yeah, that's not a thing here.
+
+      Larry's built this space where you can geek out about technique like you're analyzing a Starcraft match, and then jump into sparring like you're Saenchai in a Muay Thai training camp. It's crazy--one minute you're talking Magic the Gathering, and the next you're trading kicks. What makes this place special is how it blends martial arts with nerd culture in a way that just works.
+
+      Everyone, no matter their age or background, feels like they belong here. It's not just about getting in shape; it's about the community. If you want a place where you can be yourself, talk nerdy, and still train hard, Nerds Fighting is the spot. I highly recommend!`
   }
+
   // {
   //   name: 'Michael Wilson',
   //   job: 'Project Manager',

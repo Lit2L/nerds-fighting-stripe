@@ -34,7 +34,7 @@ export function Terminal() {
 
   return (
     <div className='relative mx-auto w-full rounded-lg text-sm text-white'>
-      <div className='mx-auto w-1/2 rounded-lg bg-neutral-900/10 shadow-xl'>
+      <div className='mx-auto w-full rounded-lg bg-neutral-900/10 shadow-xl'>
         {/* <div className='flex items-center justify-between bg-neutral-800/10 p-1'> */}
         {/* <div className='flex space-x-1'>
             <div className='size-2 rounded-full bg-red-500'></div>
@@ -53,7 +53,7 @@ export function Terminal() {
             )}
           </button> */}
         {/* </div> */}
-        <div className='font-heading relative mx-auto w-full space-y-1 p-1 tracking-wide'>
+        <div className='relative mx-auto w-full space-y-1 p-3 font-heading tracking-wide'>
           {/* <div className='absolute -z-10 opacity-50'>
             <Logo />
           </div> */}
@@ -62,9 +62,9 @@ export function Terminal() {
               key={index}
               className={`${
                 index > terminalStep ? 'opacity-0' : 'opacity-100'
-              } transition-opacity duration-300`}
+              } w-full text-left transition-opacity duration-300`}
             >
-              <span className='text-green-400'>$</span> {step}
+              <span className='text-[10px] text-green-400'>$</span> {step}
             </div>
           ))}
         </div>

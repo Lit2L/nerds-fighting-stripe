@@ -9,11 +9,11 @@ export default function Testimonials() {
       <div className='container mt-24 flex max-w-6xl flex-col gap-10 rounded-lg bg-black/20 py-32 font-genos sm:gap-y-16'>
         <HeaderSection
           label='Testimonials'
-          title='Check out reviews from our members.'
-          subtitle='We love reviews!'
+          title='Read our members reviews'
+          subtitle='We love reviews! Thank you!'
         />
 
-        <div className='columns-2 gap-5 space-y-5 md:columns-2'>
+        <div className='columns-1 gap-5 space-y-5 md:columns-2'>
           {testimonials.map((item) => (
             <div className='break-inside-avoid' key={item.name}>
               <div className='relative rounded-xl border bg-muted/25'>

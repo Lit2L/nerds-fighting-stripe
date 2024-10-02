@@ -34,7 +34,7 @@ export function Terminal() {
 
   return (
     <div className='relative mx-auto w-full rounded-lg text-sm text-white'>
-      <div className='mx-auto w-full rounded-lg bg-neutral-900/10 shadow-xl'>
+      <div className='mx-auto w-full rounded-lg bg-neutral-900/50 shadow-xl dark:bg-neutral-900/10'>
         {/* <div className='flex items-center justify-between bg-neutral-800/10 p-1'> */}
         {/* <div className='flex space-x-1'>
             <div className='size-2 rounded-full bg-red-500'></div>

@@ -92,20 +92,15 @@ export const About = () => {
             </h3>
             <div className='my-12 h-full max-w-2xl rounded-3xl border border-gray-500/20 bg-zinc-900/70 drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='md:text-md p-3 font-genos text-lg font-semibold leading-8 text-white dark:text-white'>
+                <p className='md:text-md p-3 font-genos text-lg leading-8 text-white dark:text-white'>
                   <span className='font-heading text-lg leading-8 text-emerald-500'>
                     Nerds Fighting
                   </span>{' '}
-                  started with the idea that everyone no matter where you come
-                  from or how wierd you think you are, you deserve or how nerdy
-                  you think your hobbies are with less fear. Training
-                  {/* The road is challenging but
-                  the skills and the lessons you learn about yourself are
-                  contain lessons have the powermany lessons that teach you
-                  things a "It is better to be a warrior in a garden, than a
-                  gardener in a war" many life changing be the principle that
-                  Muay Thai, the training, and the lifestyle of a healthy
-                  martial artist should be available to everyone.  */}
+                  started with the idea that we should all be able to get
+                  together a few times a week with some like-minded friends and
+                  train like fighters do. We welcome everyone We should live
+                  stronger, live healthier, live longer, live with confidence
+                  and live with less fear.
                 </p>
               </div>
             </div>
@@ -133,7 +128,7 @@ export const About = () => {
                       />
                     </AspectRatio>
                   </div>
-                  <div className='flex w-[350px] flex-col space-y-3'>
+                  <div className='flex w-[350px] flex-col space-y-6'>
                     <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
                       {card.info}
                     </Badge>
@@ -143,23 +138,23 @@ export const About = () => {
                       <h3 className='text-md font-heading'>{card.title}</h3>
                     </div>
 
-                    <p className='ml-6 w-[300px] font-cal text-sm font-light leading-6'>
+                    <p className='ml-6 w-[300px] text-sm font-light leading-6'>
                       {card.description}
                     </p>
                   </div>
                 </div>
               ) : (
                 <div className='flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-16 bg-transparent md:flex-row'>
-                  <div className='flex w-[350px] flex-col space-y-3'>
+                  <div className='flex w-[350px] flex-col space-y-6'>
                     <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-emerald-900 shadow-lg shadow-red-900 sm:tracking-wide'>
                       {card.info}
                     </Badge>
-                    <div className='flex w-full gap-3'>
+                    <div className='ml-6 flex w-full gap-3'>
                       {card.icon}
                       <h3 className='text-md font-heading'>{card.title}</h3>
                     </div>
 
-                    <p className='w-[300px] font-cal text-sm font-light leading-6'>
+                    <p className='ml-6 w-[300px] text-sm font-light leading-6'>
                       {card.description}
                     </p>
                   </div>

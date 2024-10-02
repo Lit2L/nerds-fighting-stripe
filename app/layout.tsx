@@ -26,8 +26,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable,
 
           headingFont.variable,
-          logoFont.className,
-          genosFont.variable
+          logoFont.variable,
+          genosFont.className
         )}
       >
         <SessionProvider>

@@ -6,7 +6,7 @@ const {
 } = require('tailwindcss/lib/util/flattenColorPalette')
 
 const config = {
-  darkMode: ['class', 'class'],
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -24,11 +24,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        // sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: ['var(--font-sans)', ...fontFamily.sans],
         heading: ['var(--font-heading)', ...fontFamily.sans],
         logo: ['var(--font-logo)', ...fontFamily.sans],
-        // cal: ['var(--font-cal-sans)', ...fontFamily.sans],
-        // kronaOne: ['var(--font-krona-one)', ...fontFamily.sans],
         genos: ['var(--font-genos)', ...fontFamily.sans]
       },
       colors: {

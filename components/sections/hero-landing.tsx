@@ -18,11 +18,11 @@ export default async function HeroLanding() {
     >
       <RetroGrid />
       <div className='container flex h-full w-full max-w-5xl flex-col items-center space-y-12 text-center'>
-        <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
+        <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
           Kickboxing & Martial Arts Club
         </Badge>
         <GradualSpacing
-          className='text-center font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]'
+          className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]'
           text='Nerds Fighting'
         />
         <Logo />

@@ -27,7 +27,7 @@
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
+    "next-process.env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",

@@ -48,10 +48,10 @@ Or, deploy with Vercel:
 pnpm install
 ```
 
-2. Copy `.env.example` to `.env.local` and update the variables.
+2. Copy `.process.env.example` to `.process.env.local` and update the variables.
 
 ```sh
-cp .env.example .env.local
+cp .process.env.example .process.env.local
 ```
 
 3. Start the development server:
@@ -60,12 +60,13 @@ cp .env.example .env.local
 pnpm run dev
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > I use [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) package for update this project.
 >
 > Use this command for update your project: `ncu -i --format group`
 
 ## Roadmap
+
 - [ ] Upgrade eslint to v9
 - [ ] Add resend for success subscriptions
 

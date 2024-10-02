@@ -1,7 +1,6 @@
 import { headers } from 'next/headers'
 import Stripe from 'stripe'
 
-import { env } from '@/env.mjs'
 import { prisma } from '@/lib/db'
 import { stripe } from '@/lib/stripe'
 
@@ -15,7 +14,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      env.STRIPE_WEBHOOK_SECRET
+      process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (error) {
     return new Response(`Webhook Error: ${error.message}`, { status: 400 })

@@ -6,7 +6,7 @@ import { TrialClassForm } from '../forms/trial-class-form'
 export default function NewClientSection() {
   return (
     <>
-      <div className='relative my-24 bg-black/20 font-genos text-foreground'>
+      <div className='relative my-24 w-full bg-black/20 font-genos text-foreground'>
         <div className='container py-24 lg:py-32'>
           <div className='text-center'>
             <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-white lg:text-5xl'>

@@ -1,6 +1,6 @@
 const { withContentlayer } = require('next-contentlayer2')
 
-// import("./env.mjs");
+// import("./process.env.mjs");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

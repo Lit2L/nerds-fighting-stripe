@@ -14,7 +14,7 @@ export default async function HeroLanding() {
   return (
     <section
       id='hero'
-      className='flex min-h-screen flex-col justify-center space-y-6 bg-[radial-gradient(circle_500px_at_50%_450px,#181818,transparent)]'
+      className='mx-auto flex min-h-screen w-full flex-col items-center justify-center space-y-6 bg-[radial-gradient(circle_600px_at_40%_450px,#181818,transparent)] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl'
     >
       <RetroGrid />
       <div className='container flex h-full w-full max-w-5xl flex-col items-center space-y-12 text-center'>
@@ -25,8 +25,10 @@ export default async function HeroLanding() {
           className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
           text='Nerds Fighting'
         />
-        <Logo />
-        <div className='my-6 w-full'>
+        <div className='h-54 w-72'>
+          <Logo />
+        </div>
+        <div className='my-6 w-full max-w-3xl border p-3'>
           <Terminal />
         </div>
 

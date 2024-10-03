@@ -83,21 +83,18 @@ const config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0'
-          },
+        'text-gradient': {
           to: {
-            height: 'var(--radix-accordion-content-height)'
+            backgroundPosition: '200% center'
           }
         },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' }
+        },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)'
-          },
-          to: {
-            height: '0'
-          }
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' }
         },
         grid: {
           '0%': {
@@ -109,6 +106,7 @@ const config = {
         }
       },
       animation: {
+        'text-gradient': 'text-gradient 1.3s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         grid: 'grid 25s linear infinite'

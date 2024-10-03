@@ -39,7 +39,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           'relative flex flex-col overflow-hidden rounded-3xl border shadow-sm',
           offer.title.toLocaleLowerCase() === 'pro'
             ? '-m-0.5 border-2 border-purple-400'
-            : ''
+            : '-m-0.5 border-2 border-green-400'
         )}
         key={offer.title}
       >

@@ -79,8 +79,8 @@ const classes = [
 
 export function Schedule() {
   return (
-    <section className='min-h-screen bg-[radial-gradient(circle_500px_at_50%_350px,#181818,transparent)] dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
-      <div className='mt-44 h-full w-full font-genos'>
+    <section className=''>
+      <div className='bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] py-32 font-genos dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
         <MaxWidthWrapper>
           <HeaderSection
             label='Updated since 10-2-2024'
@@ -103,7 +103,7 @@ export function Schedule() {
                       </h3>
                     </div>
                   </CardTitle>
-                  <Separator className='my-1' />
+                  <Separator className='my-1 bg-green-500' />
 
                   <div className='flex flex-col items-center'>
                     {item.schedule.map((schedule) => (

@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
+import Image from 'next/image'
 import { signIn } from 'next-auth/react'
 
 import { siteConfig } from '@/config/site'
@@ -23,17 +24,19 @@ function SignInModal({
             <img
               src='/Group10.png'
               alt={siteConfig.name}
-              className='h-16 w-20 rounded-full'
+              className='h-20 w-28 rounded-full opacity-50'
             />
           </a>
-          <h3 className='font-genos text-2xl font-bold uppercase'>Sign In</h3>
-          <p className='text-md font-genos text-gray-500'>
-            Create an account to access additional online features and up to
-            date information.
+          <h3 className='font-genos text-2xl font-bold uppercase'>
+            Welcome Back
+          </h3>
+          <p className='font-genos text-lg text-gray-500'>
+            Login into your account to manage your account, stay current with
+            the team.
           </p>
         </div>
 
-        <div className='flex flex-col space-y-4 bg-secondary/50 px-4 py-8 font-genos md:px-16'>
+        <div className='flex flex-col space-y-4 bg-secondary/60 px-4 py-8 font-genos md:px-16'>
           <Button
             variant='default'
             disabled={signInClicked}
@@ -49,7 +52,13 @@ function SignInModal({
             {signInClicked ? (
               <Icons.spinner className='mr-2 size-4 animate-spin' />
             ) : (
-              <Icons.google className='mr-2 size-4' />
+              <Image
+                src='/google.svg'
+                alt='Google'
+                height={20}
+                width={20}
+                className='mr-2 size-4'
+              />
             )}{' '}
             Sign In with Google
           </Button>

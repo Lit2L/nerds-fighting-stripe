@@ -1,4 +1,5 @@
 import { About } from '@/components/sections/about'
+import { FaqSection } from '@/components/sections/faqs'
 import HeroLanding from '@/components/sections/hero-landing'
 import NewClientFormSection from '@/components/sections/new-client'
 import { Schedule } from '@/components/sections/schedule'
@@ -11,6 +12,7 @@ export default function IndexPage() {
       <About />
       <Schedule />
       <Testimonials />
+      <FaqSection />
       <NewClientFormSection />
     </div>
   )

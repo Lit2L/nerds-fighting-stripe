@@ -44,7 +44,7 @@ export default async function HeroLanding() {
               'gap-2'
             )}
           >
-            <span className='font-heading capitalize'>Initiate-Training</span>
+            <span className='font-genos uppercase font-bold text-lg'>Initiate-Training</span>
             <Icons.arrowRight className='size-4' />
           </Link>
         </div>

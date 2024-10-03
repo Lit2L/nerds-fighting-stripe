@@ -46,11 +46,8 @@ export function NavBar({ scroll = false }: NavBarProps) {
         scroll ? (scrolled ? 'border-b' : '') : 'border-b'
       }`}
     >
-      <MaxWidthWrapper
-        className='items-bg-center between flex h-20 w-full'
-        large={documentation}
-      >
-        <div className='mx-3 flex w-full flex-1 justify-between gap-6 px-3 md:gap-10'>
+      <MaxWidthWrapper className='flex w-full' large={documentation}>
+        <div className='mx-3 flex w-full justify-between'>
           <Link href='/' className='flex size-20 items-center space-x-1.5'>
             <Logo />
           </Link>
@@ -104,7 +101,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
           {session ? (
             <Link
               href={session.user.role === 'ADMIN' ? '/admin' : '/dashboard'}
-              className='hidden md:block'
+              className='hidden md:inline-block'
             >
               <Button
                 className='gap-2 px-5'
@@ -117,14 +114,15 @@ export function NavBar({ scroll = false }: NavBarProps) {
             </Link>
           ) : status === 'unauthenticated' ? (
             <Button
-              className='hidden w-full gap-2 px-5 md:flex'
+              className='hidden w-[50px] px-12 md:flex'
               variant='default'
-              size='sm'
+              size='icon'
               rounded='full'
               onClick={() => setShowSignInModal(true)}
             >
-              <span className='text-lg'>Sign In</span>
-              <Icons.arrowRight className='size-4 hover:translate-x-3' />
+              <span className='text-md font-bold uppercase tracking-wider'>
+                Login
+              </span>
             </Button>
           ) : (
             <Skeleton className='hidden h-9 w-28 rounded-full lg:flex' />

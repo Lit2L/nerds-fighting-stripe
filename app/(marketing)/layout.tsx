@@ -9,11 +9,9 @@ interface MarketingLayoutProps {
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
     <div className='flex min-h-screen w-full flex-col'>
-      <header className='fixed inset-x-0 top-0 z-40 h-20 bg-gradient-to-bl from-emerald-500/90 via-emerald-400/70 to-emerald-600/95'>
-        <div className='flex items-center justify-center sm:justify-between'>
+      <header className='fixed  inset-x-0 top-0 z-40 h-20 bg-gradient-to-bl from-emerald-500/90 via-emerald-400/70 to-emerald-600/95'>
           <NavMobile />
           <NavBar scroll={true} />
-        </div>
       </header>
       <main className='flex-1'>{children}</main>
       <Footer />

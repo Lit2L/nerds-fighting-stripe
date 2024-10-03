@@ -42,24 +42,24 @@ export function NavMobile() {
       <button
         onClick={() => setOpen(!open)}
         className={cn(
-          'fixed right-2 top-2.5 z-50 rounded-full transition-colors duration-200 hover:bg-muted focus:outline-none active:bg-muted md:hidden',
+          'fixed right-6 top-6 z-50 rounded-full transition-all duration-300 ease-in-out hover:text-muted-foreground focus:outline-none active:bg-muted md:hidden',
           open && 'hover:bg-muted active:bg-muted'
         )}
       >
         {open ? (
-          <X className='size-5 text-muted-foreground' />
+          <X className='size-10 border-4 text-muted-foreground' />
         ) : (
-          <Menu className='size-5 text-muted-foreground' />
+          <Menu className='size-10 text-black' />
         )}
       </button>
 
       <nav
         className={cn(
-          'fixed inset-0 z-20 hidden w-full overflow-auto bg-background px-5 py-16 lg:hidden',
+          'fixed inset-0 z-20 hidden h-full w-full overflow-auto bg-neutral-900/95 font-genos text-3xl lg:hidden',
           open && 'block'
         )}
       >
-        <ul className='grid divide-y divide-muted'>
+        <ul className='flex translate-y-36 flex-col p-12 indent-20'>
           {links &&
             links.length > 0 &&
             links.map(({ title, href }) => (
@@ -130,10 +130,6 @@ export function NavMobile() {
         ) : null}
 
         <div className='mt-5 flex items-center justify-end space-x-4'>
-          <Link href={siteConfig.links.github} target='_blank' rel='noreferrer'>
-            <Icons.gitHub className='size-6' />
-            <span className='sr-only'>GitHub</span>
-          </Link>
           <ModeToggle />
         </div>
       </nav>

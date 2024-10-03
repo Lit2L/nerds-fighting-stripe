@@ -6,7 +6,7 @@ import { TrialClassForm } from '../forms/trial-class-form'
 export default function NewClientSection() {
   return (
     <>
-      <div className='relative my-24 w-full bg-black/20 font-genos text-foreground'>
+      <div className='relative my-24 w-full rounded-lg bg-zinc-800/90 font-genos text-foreground dark:bg-black/20'>
         <div className='container py-24 lg:py-32'>
           <div className='text-center'>
             <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-white lg:text-5xl'>
@@ -20,23 +20,23 @@ export default function NewClientSection() {
                 <TrialClassForm />
               </div>
 
-              <div className='absolute end-0 top-0 hidden -translate-y-36 translate-x-28 md:block'>
+              <div className='absolute -top-48 right-0 hidden md:block'>
                 <Image
                   src='/_static/illustrations/boxing-ring.svg'
                   alt='404'
-                  width={100}
-                  height={100}
-                  className='pointer-events-none mb-5 mt-6 dark:invert'
+                  width={120}
+                  height={120}
+                  className='pointer-events-none dark:invert'
                 />
               </div>
 
-              <div className='absolute bottom-0 start-0 hidden -translate-x-32 -translate-y-32 md:block'>
+              <div className='absolute -top-10 left-0 hidden -translate-y-36 md:block'>
                 <Image
                   src='/_static/illustrations/punching-bag-green.svg'
                   alt='404'
                   width={100}
                   height={100}
-                  className='pointer-events-none mb-5 mt-6 dark:invert'
+                  className='pointer-events-none dark:invert'
                 />
               </div>
             </div>

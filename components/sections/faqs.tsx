@@ -35,7 +35,7 @@ const faqData = [
     id: 'item-5',
     question: 'Can I try the class before signing up?',
     answer:
-      'Yes! We offer a free trial class for anyone interested in joining our club. You can sign up for a trial class on our website or by contacting us directly.'
+      'Yes!  We want you to find value in what we do before you commit to a membership with us so we offer a free trial class for anyone interested in joining our club. You can sign up for a trial class on our website or by contacting us directly.'
   }
 ]
 

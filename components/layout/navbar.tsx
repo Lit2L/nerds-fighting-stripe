@@ -56,14 +56,14 @@ export function NavBar({ scroll = false }: NavBarProps) {
           </Link>
 
           {links && links.length > 0 ? (
-            <nav className='mr-6 hidden gap-6 md:flex md:space-x-6'>
+            <nav className='mr-6 hidden gap-6 md:flex md:space-x-3'>
               {links.map((item, index) => (
                 <Link
                   key={index}
                   href={item.disabled ? '#' : item.href}
                   prefetch={true}
                   className={cn(
-                    'text-md flex items-center font-heading tracking-tight text-white transition-colors duration-300 hover:text-white/50',
+                    'text-md flex items-center tracking-tight text-white transition-colors duration-300 ease-in-out hover:text-white/50',
                     item.href.startsWith(`/${selectedLayout}`)
                       ? 'text-foreground'
                       : 'text-foreground',

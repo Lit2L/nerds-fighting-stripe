@@ -13,10 +13,10 @@ export const marketingConfig: MarketingConfig = {
     {
       title: 'Schedule',
       href: '/schedule'
-    },
-    {
-      title: 'Blog',
-      href: '/blog'
     }
+    // {
+    //   title: 'Blog',
+    //   href: '/blog'
+    // }
   ]
 }

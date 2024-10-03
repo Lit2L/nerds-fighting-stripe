@@ -79,11 +79,11 @@ const classes = [
 
 export function Schedule() {
   return (
-    <section className='dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
-      <div className='pb-6 pt-28 font-sans'>
+    <section className='min-h-screen bg-[radial-gradient(circle_500px_at_50%_350px,#181818,transparent)] dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
+      <div className='mt-44 h-full w-full font-genos'>
         <MaxWidthWrapper>
           <HeaderSection
-            label='Updated since 10-1-2024'
+            label='Updated since 10-2-2024'
             title='Muay Thai Schedule'
             subtitle=''
           />
@@ -98,7 +98,7 @@ export function Schedule() {
                   <CardTitle className='p-1'>
                     <div className='flex items-center justify-between gap-3'>
                       <MdSportsMartialArts className='size-6 text-white' />
-                      <h3 className='font-sans text-white dark:text-gray-300'>
+                      <h3 className='font-genos uppercase text-emerald-400 dark:text-green-300'>
                         {item.title}
                       </h3>
                     </div>

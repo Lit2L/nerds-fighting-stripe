@@ -7,13 +7,16 @@
     "url": "https://twitter.com/mickasmt"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "prisma generate && stripe listen --forward-to localhost:4242/api/webhooks/stripe & next dev",
     "build": "next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
     "postinstall": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:seed": "prisma db seed",
+    "prisma:deploy": "prisma migrate deploy",
     "email": "email dev --dir emails --port 3333"
   },
   "dependencies": {

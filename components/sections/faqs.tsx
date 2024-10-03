@@ -11,32 +11,31 @@ const faqData = [
   {
     id: 'item-1',
     question: 'What to bring?',
-    answer:
-      "Our free plan is completely free, with no monthly or annual charges. It's a great way to get started and explore our basic features."
+    answer: `We recommend bringing a pair of 16oz or 14oz Muay Thai or Boxing gloves, Shin Guards and water. Other optional recommendations include hand wraps, a mouth guard and, a towel. If you don't have gloves or shin guards, we have loaners available.`
   },
   {
     id: 'item-2',
-    question: 'How much does the Basic Monthly plan cost?',
+    question: 'How much is the Pro Membership plan?',
     answer:
-      'The Basic Monthly plan is priced at $15 per month. It provides access to our core features and is billed on a monthly basis.'
+      'The Pro Membership Plan which is priced at $125/month currently for a limited time with a New Club Special which prices the membership at $100/month. It provides access to our core features and is billed on a monthly basis automatically.'
   },
   {
     id: 'item-3',
-    question: 'What is the price of the Pro Monthly plan?',
-    answer:
-      'The Pro Monthly plan is available for $25 per month. It offers advanced features and is billed on a monthly basis for added flexibility.'
+    question: 'How do I cancel my subscription?',
+    answer: `You can cancel your subscription at any time by visiting your account settings. Once you cancel, you'll still have access to your account until the end of your billing cycle. Cancellation charges may apply.`
   },
   {
     id: 'item-4',
-    question: 'Do you offer any annual subscription plans?',
+    question: 'Are drop-ins available?',
     answer:
-      'Yes, we offer annual subscription plans for even more savings. The Basic Annual plan is $144 per year, and the Pro Annual plan is $300 per year.'
+      'Yes! We offer drop-in classes for $25 per class. You can pay at the gym or online through our website.'
   },
+
   {
     id: 'item-5',
-    question: 'Is there a trial period for the paid plans?',
+    question: 'Can I try the class before signing up?',
     answer:
-      "We offer a 14-day free trial for both the Pro Monthly and Pro Annual plans. It's a great way to experience all the features before committing to a paid subscription."
+      'Yes! We offer a free trial class for anyone interested in joining our club. You can sign up for a trial class on our website or by contacting us directly.'
   }
 ]
 

@@ -24,7 +24,7 @@ const classes = [
     title: 'Sunday',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
+      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
     schedule: [{ id: 1, day: 'Sun', time: '6:00 AM' }]
   },
   {
@@ -33,7 +33,7 @@ const classes = [
     description: 'Muay Thai',
     level: 'All levels',
     attributes:
-      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
+      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
     schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
   },
 
@@ -43,7 +43,7 @@ const classes = [
     level: 'All levels',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
+      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
     schedule: [
       {
         id: 1,
@@ -58,7 +58,7 @@ const classes = [
     level: 'all levels',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
+      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
     schedule: [
       {
         id: 1,
@@ -73,7 +73,7 @@ const classes = [
     level: 'All levels',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
+      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
     schedule: [{ id: 1, day: 'Sat', time: '8:00 AM' }]
   }
 ]
@@ -104,7 +104,7 @@ export function Schedule() {
                       </h3>
                     </div>
                   </CardTitle>
-                  <Separator className='my-1 bg-green-500' />
+                  <Separator className='my-1 bg-emerald-500' />
 
                   <div className='flex flex-col items-center'>
                     {item.schedule.map((schedule) => (

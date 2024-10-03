@@ -10,7 +10,7 @@ export const pricingData: SubscriptionPlan[] = [
       'No pressure to join',
       'Invite a friend and receive one week of membership free'
     ],
-    limitations: ['Limited to one free trial class per person'],
+    limitations: [],
     prices: {
       single: 0,
       monthly: 0,
@@ -53,12 +53,7 @@ export const pricingData: SubscriptionPlan[] = [
       'Bag and Pad work',
       'Fitness and Weight Loss'
     ],
-    limitations: [
-      'No priority access to new features.',
-      'Limited customer support',
-      'No custom branding',
-      'Limited access to business resources.'
-    ],
+    limitations: [],
     prices: {
       single: 25,
       monthly: 100,
@@ -72,7 +67,7 @@ export const pricingData: SubscriptionPlan[] = [
   }
 ]
 
-export const plansColumns = ['Drop-ins', 'Pro'] as const
+export const plansColumns = ['Pro', 'Single', 'Free'] as const
 
 export const comparePlans: PlansRow[] = [
   {

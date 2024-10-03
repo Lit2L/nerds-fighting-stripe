@@ -74,9 +74,9 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='container relative my-36 min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)]'
+      className='container relative my-16 min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
     >
-      <div className=''>
+      <div className='rounded-lg bg-gray-700/20 p-6 py-24 shadow-2xl shadow-gray-900'>
         <div className='relative flex translate-y-24 flex-col items-center justify-center'>
           <div className='absolute -top-10 z-10 opacity-90'>
             <Image
@@ -99,7 +99,7 @@ export const About = () => {
                   <span className='font-heading text-lg leading-8 text-emerald-500'>
                     Nerds Fighting MTK
                   </span>{' '}
-                  began with the idea that everyone should live with real
+                  began with the idea that every should live with real
                   confidence in themselves and with less fear. We think this can
                   be accomplished with Muay Thai Kickboxing. <br />
                   <br />

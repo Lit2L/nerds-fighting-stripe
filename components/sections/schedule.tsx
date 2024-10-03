@@ -14,6 +14,7 @@ import { MdSportsMartialArts } from 'react-icons/md'
 import { HeaderSection } from '@/components/shared/header-section'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 
+import { Badge } from '../ui/badge'
 import { Card, CardContent, CardFooter, CardTitle } from '../ui/card'
 import { Separator } from '../ui/separator'
 
@@ -23,7 +24,7 @@ const classes = [
     title: 'Sunday',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai, Boxing, Conditioning, Bag Work, Focus Mitts, Thai Pads, Partner & Group Drills',
+      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
     schedule: [{ id: 1, day: 'Sun', time: '6:00 AM' }]
   },
   {
@@ -32,7 +33,7 @@ const classes = [
     description: 'Muay Thai',
     level: 'All levels',
     attributes:
-      'Muay Thai, Boxing, Conditioning, Bag Work, Focus Mitts, Thai Pads, Partner & Group Drills',
+      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
     schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
   },
 
@@ -42,7 +43,7 @@ const classes = [
     level: 'All levels',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai, Boxing, Conditioning, Bag Work, Focus Mitts, Thai Pads, Partner & Group Drills',
+      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
     schedule: [
       {
         id: 1,
@@ -57,7 +58,7 @@ const classes = [
     level: 'all levels',
     description: 'Muay Thai',
     attributes:
-      'Muay Thai, Boxing, Conditioning, Bag Work, Focus Mitts, Thai Pads, Partner & Group Drills',
+      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
     schedule: [
       {
         id: 1,
@@ -70,9 +71,9 @@ const classes = [
     id: 5,
     title: 'Saturday',
     level: 'All levels',
-    description: 'Muay Thai.',
+    description: 'Muay Thai',
     attributes:
-      'Muay Thai, Boxing, Conditioning, Bag Work, Focus Mitts, Thai Pads, Partner & Group Drills',
+      'Muay Thai Kickboxing, Boxing, Conditioning,Heavy Bag, Focus Mitts, Thai Pads, Group Drills',
     schedule: [{ id: 1, day: 'Sat', time: '8:00 AM' }]
   }
 ]
@@ -120,7 +121,7 @@ export function Schedule() {
                             {schedule.time}
                           </span>
 
-                          <p className='w-3/16 text-md m-1 flex font-genos font-semibold capitalize tracking-wide text-white dark:text-green-500'>
+                          <p className='w-3/16 m-1 flex font-genos text-lg font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
                             {item.description}
                           </p>
                         </div>
@@ -128,11 +129,16 @@ export function Schedule() {
                     ))}
                   </div>
                   <div className='mt-2 flex w-full flex-1 flex-col items-end justify-between'>
-                    <span className='flex w-full items-center justify-between'>
-                      <GiPunchingBag className='size-6 text-red-500' />
-                      <p className='ml-3 font-genos text-xs font-semibold tracking-wide text-white dark:text-gray-300'>
-                        {item.attributes}
-                      </p>
+                    <span className='flex w-full justify-between text-right'>
+                      <GiPunchingBag className='mx-3 size-12 text-red-500' />
+                      {item.attributes && (
+                        <small
+                          key={item.id}
+                          className='text-xs font-bold uppercase text-white dark:text-gray-300'
+                        >
+                          {item.attributes}
+                        </small>
+                      )}
                     </span>
                   </div>
                 </Card>

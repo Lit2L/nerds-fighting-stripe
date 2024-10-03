@@ -36,21 +36,21 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
     return (
       <div
         className={cn(
-          'relative flex flex-col overflow-hidden rounded-3xl border shadow-sm',
+          'relative flex flex-col overflow-hidden rounded-3xl shadow-sm',
           offer.title.toLocaleLowerCase() === 'pro'
-            ? '-m-0.5 border-2 border-purple-400'
-            : '-m-0.5 border-2 border-green-400'
+            ? '-m-0.5 border-2 border-red-600'
+            : '-m-0.5 border-2 border-emerald-400'
         )}
         key={offer.title}
       >
-        <div className='min-h-[150px] items-start space-y-4 bg-muted/50 p-6'>
-          <p className='flex text-sm font-bold uppercase tracking-wider text-muted-foreground'>
+        <div className='min-h-[150px] items-start space-y-4 bg-foreground/90 p-6'>
+          <p className='flex text-lg font-bold uppercase tracking-wider text-primary-foreground'>
             {offer.title}
           </p>
 
           <div className='flex flex-row'>
             <div className='flex items-end'>
-              <div className='flex text-left text-3xl font-semibold leading-6'>
+              <div className='flex text-left text-3xl font-semibold leading-6 text-emerald-500'>
                 {isYearly && offer.prices.monthly > 0 ? (
                   <>
                     <span className='mr-2 text-muted-foreground/80 line-through'>
@@ -138,10 +138,10 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
 
   return (
     <MaxWidthWrapper>
-      <section className='mt-28 flex flex-col items-center rounded-sm border border-white/30 text-center'>
-        <HeaderSection label='Pricing' title='Join the Nerds Fighting Team!' />
+      <section className='mt-28 flex flex-col items-center rounded-sm text-center'>
+        <HeaderSection label='Pricing' title='Join the Nerds Family!' />
 
-        <div className='mb-4 mt-10 flex items-center gap-5'>
+        <div className='mb-4 mt-10 flex items-center'>
           <ToggleGroup
             type='single'
             size='sm'
@@ -151,18 +151,18 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
             className='h-9 overflow-hidden rounded-full border bg-background p-1 *:h-7 *:text-muted-foreground'
           >
             <ToggleGroupItem
-              value='yearly'
-              className='rounded-full px-5 data-[state=on]:!bg-primary data-[state=on]:!text-primary-foreground'
-              aria-label='Toggle yearly billing'
-            >
-              Yearly (-20%)
-            </ToggleGroupItem>
-            <ToggleGroupItem
               value='monthly'
               className='rounded-full px-5 data-[state=on]:!bg-primary data-[state=on]:!text-primary-foreground'
               aria-label='Toggle monthly billing'
             >
               Monthly
+            </ToggleGroupItem>
+            <ToggleGroupItem
+              value='yearly'
+              className='rounded-full px-5 data-[state=on]:!bg-primary data-[state=on]:!text-primary-foreground'
+              aria-label='Toggle yearly billing'
+            >
+              Yearly (-20%)
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -177,11 +177,11 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           Email{' '}
           <a
             className='font-medium text-primary hover:underline'
-            href='mailto:support@saas-starter.com'
+            href='mailto:larryl@nerdsfighting.com'
           >
-            support@saas-starter.com
+            larryl@nerdsfighting.com
           </a>{' '}
-          for to contact our support team.
+          for more information.
           <br />
           <strong>
             You can test the subscriptions and won&apos;t be charged.

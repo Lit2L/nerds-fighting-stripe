@@ -69,7 +69,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
               'hidden h-screen duration-500 md:block'
             )}
           >
-            <div className='flex h-full max-h-screen flex-1 flex-col gap-2 bg-black/50'>
+            <div className='flex h-full max-h-screen flex-1 flex-col gap-2 bg-pink-500'>
               <div className='flex h-14 items-center p-4 lg:h-[60px]'>
                 <Button
                   variant='ghost'
@@ -99,7 +99,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                     className='flex flex-col gap-0.5'
                   >
                     {isSidebarExpanded ? (
-                      <p className='text-xs text-muted-foreground'>
+                      <p className='border-4 text-xl text-muted-foreground'>
                         {section.title}
                       </p>
                     ) : (

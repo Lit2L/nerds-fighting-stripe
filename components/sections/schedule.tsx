@@ -6,16 +6,14 @@ import {
   GiBoxingGlove,
   GiBoxingRing,
   GiJumpingRope,
-  GiPunchingBag,
-  GiWeightLiftingUp
+  GiPunchingBag
 } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
 
 import { HeaderSection } from '@/components/shared/header-section'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 
-import { Badge } from '../ui/badge'
-import { Card, CardContent, CardFooter, CardTitle } from '../ui/card'
+import { Card, CardTitle } from '../ui/card'
 import { Separator } from '../ui/separator'
 
 const classes = [

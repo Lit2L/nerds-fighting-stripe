@@ -8,7 +8,7 @@ export const metadata = constructMetadata({
 
 export default function SchedulePage() {
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center'>
+    <div className='flex min-h-screen flex-col py-20'>
       <Schedule />
     </div>
   )

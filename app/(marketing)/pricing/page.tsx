@@ -11,7 +11,7 @@ import { PricingFaq } from '@/components/pricing/pricing-faq'
 
 export const metadata = constructMetadata({
   title: 'Pricing Nerds Fighting Subscription',
-  description: 'Explore our subscription plans.'
+  description: 'Explore our membership plans.'
 })
 
 export default async function PricingPage() {

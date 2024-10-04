@@ -47,7 +47,7 @@ export function NavMobile() {
         )}
       >
         {open ? (
-          <X className='size-10 border-4 text-muted-foreground' />
+          <X className='size-10 text-foreground' />
         ) : (
           <Menu className='size-10 text-black' />
         )}
@@ -55,7 +55,7 @@ export function NavMobile() {
 
       <nav
         className={cn(
-          'fixed inset-0 z-20 hidden h-full w-full overflow-auto bg-neutral-900/95 font-genos text-3xl lg:hidden',
+          'fixed inset-0 z-20 hidden h-full w-full overflow-auto bg-gradient-to-b from-emerald-950/50 via-green-500 to-emerald-950/50 font-genos text-3xl dark:bg-neutral-900/95 lg:hidden',
           open && 'block'
         )}
       >
@@ -63,15 +63,17 @@ export function NavMobile() {
           {links &&
             links.length > 0 &&
             links.map(({ title, href }) => (
-              <li key={href} className='py-3'>
-                <Link
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className='flex w-full font-medium capitalize'
-                >
-                  {title}
-                </Link>
-              </li>
+              <>
+                <li key={href} className='py-3'>
+                  <Link
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className='flex w-full font-medium capitalize'
+                  >
+                    {title}
+                  </Link>
+                </li>
+              </>
             ))}
 
           {session ? (
@@ -119,8 +121,14 @@ export function NavMobile() {
                   Sign up
                 </Link>
               </li>
+              <li className='py-6'>
+                <ModeToggle />
+              </li>
             </>
           )}
+          {/* <div className='mt-5 flex items-start justify-center border'>
+            <ModeToggle />
+          </div> */}
         </ul>
 
         {documentation ? (
@@ -128,10 +136,6 @@ export function NavMobile() {
             <DocsSidebarNav setOpen={setOpen} />
           </div>
         ) : null}
-
-        <div className='mt-5 flex items-center justify-end space-x-4'>
-          <ModeToggle />
-        </div>
       </nav>
     </div>
   )

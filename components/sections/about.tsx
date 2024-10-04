@@ -76,7 +76,7 @@ export const About = () => {
       id='about'
       className='container relative my-16 min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
     >
-      <div className='rounded-lg bg-gray-700/20 p-6 py-24 shadow-2xl shadow-gray-900'>
+      <div className='w-full rounded-lg bg-gray-700/20 p-6 py-24 shadow-2xl shadow-gray-900'>
         <div className='relative flex translate-y-24 flex-col items-center justify-center'>
           <div className='absolute -top-10 z-10 opacity-90'>
             <Image
@@ -127,7 +127,7 @@ export const About = () => {
               className='flex flex-col items-center justify-center'
             >
               {card.id % 2 === 0 ? (
-                <div className='flex w-full max-w-4xl flex-col items-center justify-center gap-16 bg-transparent md:flex-row'>
+                <div className='flex w-full flex-col items-center justify-center gap-16 bg-transparent md:max-w-2xl md:flex-row'>
                   <div className='flex items-center justify-center md:w-[350px]'>
                     <AspectRatio ratio={4 / 3}>
                       <Image
@@ -156,7 +156,7 @@ export const About = () => {
                   </div>
                 </div>
               ) : (
-                <div className='flex w-full max-w-4xl flex-col-reverse items-center justify-center gap-16 bg-transparent md:flex-row'>
+                <div className='flex w-full flex-col-reverse items-center justify-center gap-16 bg-transparent md:max-w-2xl md:flex-row'>
                   <div className='flex w-[350px] flex-col space-y-6'>
                     <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-emerald-900 shadow-lg shadow-red-900 sm:tracking-wide'>
                       {card.info}

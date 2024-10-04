@@ -30,13 +30,13 @@ function SignInModal({
           <h3 className='font-genos text-2xl font-bold uppercase'>
             Welcome Back
           </h3>
-          <p className='font-genos text-lg text-gray-500'>
+          <p className='font-genos text-lg text-gray-50'>
             Login into your account to manage your account, stay current with
             the team.
           </p>
         </div>
 
-        <div className='flex flex-col space-y-4 bg-secondary/60 px-4 py-8 font-genos md:px-16'>
+        <div className='flex flex-col space-y-4 bg-secondary/60 px-4 py-8 font-genos text-lg md:px-16'>
           <Button
             variant='default'
             disabled={signInClicked}
@@ -60,7 +60,7 @@ function SignInModal({
                 className='mr-2 size-4'
               />
             )}{' '}
-            Sign In with Google
+            <span className='text-lg'>Sign In with Google</span>
           </Button>
         </div>
       </div>

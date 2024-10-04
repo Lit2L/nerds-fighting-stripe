@@ -45,16 +45,14 @@ export function FaqSection() {
       <HeaderSection
         label='FAQ'
         title='Frequently Asked Questions'
-        subtitle="Explore our comprehensive FAQ to find quick answers to common
-          inquiries. If you need further assistance, don't hesitate to
-          contact us for personalized help."
+        subtitle='Here are some common questions we get asked.'
       />
 
-      <Accordion type='single' collapsible className='my-12 w-full'>
+      <Accordion type='single' collapsible className='my-6 w-full'>
         {faqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>
             <AccordionTrigger>{faqItem.question}</AccordionTrigger>
-            <AccordionContent className='text-sm text-muted-foreground sm:text-[15px]'>
+            <AccordionContent className='text-md text-muted-foreground'>
               {faqItem.answer}
             </AccordionContent>
           </AccordionItem>

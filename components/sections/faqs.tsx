@@ -11,7 +11,15 @@ const faqData = [
   {
     id: 'item-1',
     question: 'What to bring?',
-    answer: `We recommend bringing a pair of 16oz or 14oz Muay Thai or Boxing gloves, Shin Guards and water. Other optional recommendations include hand wraps, a mouth guard and, a towel. If you don't have gloves or shin guards, we have loaners available.`
+    answer: [
+      '- Water bottle.',
+      '- Boxing or Muay Thai Gloves (14-16oz)',
+      '- Shin Guards',
+      '- Hand Wraps [optional]',
+      '- Mouth Guard [optional]',
+      '- Headgear [optional]',
+      '- Towel [optional]'
+    ]
   },
   {
     id: 'item-2',
@@ -28,32 +36,56 @@ const faqData = [
     id: 'item-4',
     question: 'Are drop-ins available?',
     answer:
-      'Yes! We offer drop-in classes for $25 per class. You can pay at the gym or online through our website.'
+      'Absolutely! We offer drop-in classes for $25 per class. You can pay at the gym via cash, venmo or zelle or online via our website.'
   },
 
   {
     id: 'item-5',
     question: 'Can I try the class before signing up?',
     answer:
-      'Yes!  We want you to find value in what we do before you commit to a membership with us so we offer a free trial class for anyone interested in joining our club. You can sign up for a trial class on our website or by contacting us directly.'
+      'Of Course!  Please come in for a free trial class available for any new members.  Refer a friend to recieve one free class.  You can sign up for a trial class on our website or by contacting us directly.'
+  },
+  {
+    id: 'item-6',
+    question: 'Is sparring allowed?',
+    answer:
+      'Anyone over 18 can spar as. However we may limit members from sparring too much. Safety is our highest concern.'
+  },
+  {
+    id: 'item-7',
+    question: 'Can we spar?',
+    answer:
+      'All consenting adults are allowed to spar if you want to. However we may limit members from sparring too much. Safety is our highest concern.'
   }
 ]
 
 export function FaqSection() {
   return (
-    <section className='container max-w-4xl py-2'>
+    <section className='mx-auto max-w-4xl rounded-md bg-neutral-950/80 p-6 text-emerald-50 shadow-2xl shadow-emerald-600/50'>
       <HeaderSection
         label='FAQ'
         title='Frequently Asked Questions'
-        subtitle='Here are some common questions we get asked.'
+        subtitle='Most common questions we get asked.'
       />
 
-      <Accordion type='single' collapsible className='my-6 w-full'>
+      <Accordion
+        type='single'
+        collapsible
+        className='my-6 w-full rounded-md bg-neutral-900/60 p-6'
+      >
         {faqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>
             <AccordionTrigger>{faqItem.question}</AccordionTrigger>
-            <AccordionContent className='text-md text-muted-foreground'>
-              {faqItem.answer}
+            <AccordionContent className='md:text-md rounded-xl bg-neutral-50 px-3 pt-3 text-secondary-foreground lg:m-3 lg:text-lg'>
+              {Array.isArray(faqItem.answer) ? (
+                <ul>
+                  {faqItem.answer.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{faqItem.answer}</p>
+              )}
             </AccordionContent>
           </AccordionItem>
         ))}

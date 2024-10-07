@@ -142,10 +142,9 @@ export const About = () => {
                   {/* , mental
                   toughness, mental sharpness  and confidence, */}
                   <br />
-                  We specialize in teaching and training newbies and newcomers.
-                  For any new or potential members, come in and claim your free
-                  trial class so you can decide if our style of training is for
-                  you.
+                  We specialize in training newbies and newcomers. We invite you
+                  to join us for a free trial class and decide if we&apos;re a
+                  good fit for you.
                   {/* yourself.  No pressure to join. We specialize in introducing complete newbies to the
                   sport and martial arts and turning them into confident and
                   skilled practitioners. family is a Muay Thai training gym for

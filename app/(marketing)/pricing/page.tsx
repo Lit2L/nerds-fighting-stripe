@@ -5,9 +5,9 @@ import { getCurrentUser } from '@/lib/session'
 import { getUserSubscriptionPlan } from '@/lib/subscription'
 import { constructMetadata } from '@/lib/utils'
 import AnimatedGradientText from '@/components/ui/animated-gradient-text'
-import { ComparePlans } from '@/components/pricing/compare-plans'
 import { PricingCards } from '@/components/pricing/pricing-cards'
-import { PricingFaq } from '@/components/pricing/pricing-faq'
+
+import { PricingTiers } from './pricing'
 
 export const metadata = constructMetadata({
   title: 'Pricing Nerds Fighting Subscription',
@@ -50,6 +50,7 @@ export default async function PricingPage() {
 
   return (
     <div className='flex w-full flex-col gap-16 py-8 md:py-8'>
+      <PricingTiers />
       <PricingCards userId={user?.id} subscriptionPlan={subscriptionPlan} />
       <hr className='container' />
       {/* <ComparePlans />

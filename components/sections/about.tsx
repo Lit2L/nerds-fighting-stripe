@@ -15,7 +15,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 
-const featureCards = [
+const trainingCards = [
   {
     id: 0,
     title: 'Private Lessons',
@@ -90,38 +90,126 @@ export const About = () => {
 
           <div className='flex -translate-y-24 flex-col items-center justify-center rounded-full py-20'>
             <h3 className='pt-36 text-center font-heading text-lg'>
-              The Dojo.
-              <FaYinYang className='-z-10 mx-auto size-12' />
+              Nerds Fighting
+              <FaYinYang className='-z-10 mx-auto my-1 size-12' />
             </h3>
+            <strong className='text-md text-center font-light text-gray-500'>
+              Train for Life
+            </strong>
+
             <div className='my-12 h-full max-w-2xl rounded-3xl border border-gray-500/20 bg-zinc-900/70 drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='md:text-md p-3 font-genos text-lg leading-8 text-white dark:text-white'>
-                  <span className='font-heading text-lg leading-8 text-emerald-500'>
-                    Nerds Fighting MTK
+                <p className='text-left text-xl font-bold text-white dark:text-white'>
+                  Who We Are
+                </p>
+                <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
+                  <Separator className='my-6' />
+                  <span className='gap-3 font-bold text-emerald-500'>
+                    Nerds Fighting
                   </span>{' '}
-                  began with the idea that every should live with real
-                  confidence in themselves and with less fear. We think this can
-                  be accomplished with Muay Thai Kickboxing. <br />
+                  is a Muay Thai and Martial Arts training club and we provide a
+                  workout and a practice that will improve you physical and
+                  mental health and journey your personal growth through Muay
+                  Thai training. <br />
                   <br />
-                  Any kind of workout is a great workout but given a little time
-                  to develop some technique and conditioning then no other
-                  workout is funner and more rewarding than Muay Thai
-                  Kickboxing.
-                  {/* Kickboxing. Cracking the heavy bag with a roundkick or snapping punches on
-                  focus mitts next to others doing the same that leaves you
-                  feeling peaceful and calm with a We believe that workouts
-                  should also provide you with a new skill or a higher level of
-                  confidence that you carry outside of the gym and with you for
-                  the rest of your life. */}
+                  The math is simple; your quality life will depend on your
+                  ability to keep physically fit, mentally sharp and spiritually
+                  confident. The practice of Muay Thai is rich with wisdom,
+                  skills, techniques, challenges and the lessons that await for
+                  you to overcome on your journey. You can only win by trying,
+                  your future self will thank you.
+                  {/*
+                  You&apos;ll feel youthful, energetic, strong, confident,
+                  calmer and the list goes on and on. . You&apos;ll never be
+                  pressured into competing or anything else you are not
+                  comfortable with. Our main focus is on your health and
+                  fitness. The math is simple; Your quality of life depend
+                  mainly on your ability to keep physically fit, remain mentally
+                  sharp and stay spiritually confident and experience has taught
+                  us Muay Thai is the funnest, most engaging and rewarding way
+                  to workout. Come in for a free class and experience it for
+                  yourself. The art of Muay Thai is rich with wisdom,
+                  challenges, pays you pack and rewards you for taking the time
+                  to learn learning it you quite like Muay Thai. We designed our
+                  workouts to get your body moving and moving with a purpose.
+                  Nothing else in the world can return has the biggest return on
+                  the time invested in training than with our Muay Thai
+                  Kickboxing program. */}
+                  {/* #physically improves your physical strength, cardio,
+                  conditioning, flexibility, balance, coordination, agility,
+                  speed, power, endurance all at the same time. */}
+                  <br />
+                  {/* , mental
+                  toughness, mental sharpness  and confidence, */}
+                  <br />
+                  We specialize in teaching and training newbies and newcomers.
+                  For any new or potential members, come in and claim your free
+                  trial class so you can decide if our style of training is for
+                  you.
+                  {/* yourself.  No pressure to join. We specialize in introducing complete newbies to the
+                  sport and martial arts and turning them into confident and
+                  skilled practitioners. family is a Muay Thai training gym for
+                  the nerds. We value technique, skill, physical fitness and the
+                  health of your brain above all else. We are a gym that
+                  considers your Brain Health and your overall longevity to be
+                  the biggest concern while designing our Muay Thai program. Our
+                  training style is rooted in the belief that the Art of of Muay
+                  Thai is rich with wisdom and skills to be learned and also
+                  contain lessons about yourself that reveal the truth about
+                  your physical and mental limitations. The practice of Muay
+                  Thai is a blessing that contains opportunities to safely and
+                  methodically face your personal fears at your own pace and
+                  within a controlled supervised environment. Become strong
+                  within uncertainty, become courageous within fear, become
+                  confident within doubt, become disciplined within chaos,
+                  humble within victory and defeat. prioritizing the health of
+                  your brain, developing a with the health of your brain, your
+                  well-being and personal growth. We put Health and Longevity at
+                  the forefront, believing that both a fit body and mental
+                  sharpness are essential to your quality of life. Finally, we
+                  focus on developing Technique and Skill, understanding that
+                  mastery of Muay Thai comes through disciplined practice and
+                  dedication. family began as an empathetic is grounded in our
+                  philosophy that is rooted in the philosophy that every person
+                  in the world would benefit in from feeling healthier, more fit
+                  and inside a stronger body. and strong from the skills, in the
+                  style of Muay Thai Kickboxing learning to fight will
+                  strengthen that a style and philosophy that ranks a hierarchy
+                  of longevity, began with a goal to is a Muay Thai journey
+                  began with a goal rooted in the values we of priority that
+                  guides the methodology and philosophy in our style of
+                  training. express our core values <br /> is rooted in began
+                  with a goal and Brain Cells, Longevity, Health, Technique, a
+                  belief that Muay Thai Kickboxing is a practice that is rich
+                  with lessons that reveal the truth about your physical and
+                  mental limitations. The practice of Muay Thai is a blessing
+                  that contain opportunities to safely and methodically face
+                  your personal fears at your own pace and within a controlled
+                  supervised environment. */}
+                  {/* <br />
+                  <br />
+                  Become strong within uncertainty, become courageous within
+                  fear, become confident within doubt, become disciplined within
+                  chaos, humble within victory and defeat. <br />
+                  <br />
+                  martial arts training can transform the lives of most everyday
+                  people because within the art of Muay Thai contains the
+                  challenge of overcoming yourself. Life becomes unnecessarily
+                  more difficult when you are . are typically our own worst
+                  enemies. physically and spiritual challenges, obstacles, Muay
+                  Thai by providing challenges with losses and successes, needed
+                  to overcome fears, to have the confidence in themselves to be
+                  ready for anything that may come their way. lives in many ways
+                  and therefore we want to . */}
+                  <br />
                 </p>
               </div>
             </div>
-            <Separator className='my-3 bg-white' />
           </div>
         </div>
 
         <div className='flex w-full flex-col items-center justify-center gap-12'>
-          {featureCards.map((card) => (
+          {trainingCards.map((card) => (
             <div
               key={card.id}
               className='flex flex-col items-center justify-center'

@@ -27,6 +27,7 @@ export default async function HeroLanding() {
         />
         <div className='h-54 w-72'>
           <Logo />
+          <span className=''>Train For Life</span>
         </div>
         <div className='my-6 w-full max-w-3xl rounded-sm border p-3'>
           <Terminal />
@@ -44,7 +45,9 @@ export default async function HeroLanding() {
               'gap-2'
             )}
           >
-            <span className='font-genos uppercase font-bold text-lg'>Initiate-Training</span>
+            <span className='font-genos text-lg font-bold uppercase'>
+              Initiate-Training
+            </span>
             <Icons.arrowRight className='size-4' />
           </Link>
         </div>

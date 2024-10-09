@@ -13,7 +13,7 @@ export function constructMetadata({
   title = siteConfig.name,
   description = siteConfig.description,
   image = siteConfig.ogImage,
-  icons = '/favicon.ico',
+  icons = '/public/_static/favicons/android-chrome-192x192.png',
   noIndex = false
 }: {
   title?: string

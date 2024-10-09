@@ -69,7 +69,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
               'hidden h-screen duration-500 md:block'
             )}
           >
-            <div className='flex h-full max-h-screen flex-1 flex-col gap-2 bg-pink-500'>
+            <div className='flex h-full max-h-screen flex-1 flex-col gap-2 bg-emerald-900'>
               <div className='flex h-14 items-center p-4 lg:h-[60px]'>
                 <Button
                   variant='ghost'

@@ -91,9 +91,9 @@ export const Training = () => {
                         src={card.image}
                         alt={card.title}
                         className='rounded-lg object-cover'
-                        fill
-                        // height={350}
-                        // width={350}
+                        // fill
+                        height={350}
+                        width={350}
                       />
                     </AspectRatio>
                   </div>
@@ -133,7 +133,7 @@ export const Training = () => {
                         src={card.image}
                         alt={card.title}
                         className='rounded-lg object-cover'
-                        height={300}
+                        height={350}
                         width={350}
                       />
                     </AspectRatio>

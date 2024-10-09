@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer'
-import { NavMobile } from '@/components/layout/mobile-nav'
+import NavMobile from '@/components/layout/mobile-nav'
 import { NavBar } from '@/components/layout/navbar'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 

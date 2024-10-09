@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/shared/icons'
 
+import { FlipWordsComponent } from '../FlipWordsComponent'
 import Logo from '../Logo'
 import { Terminal } from '../terminal'
 import { Badge } from '../ui/badge'
@@ -29,12 +30,13 @@ export default async function HeroLanding() {
           <Logo />
           <span className=''>Train For Life</span>
         </div>
-        <div className='my-6 w-full max-w-3xl rounded-sm border p-3'>
-          <Terminal />
+        <div className='w-full max-w-3xl rounded-sm border p-3'>
+          {/* <Terminal /> */}
+          <FlipWordsComponent />
         </div>
 
         <div
-          className='mt-3 flex justify-center space-x-2 md:space-x-4'
+          className='flex justify-center space-x-2 md:space-x-4'
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
           <Link

@@ -1,29 +1,29 @@
 import { PlansRow, SubscriptionPlan } from 'types'
 
 export const pricingData: SubscriptionPlan[] = [
+  // {
+  //   title: 'Trial Class(Free)',
+  //   description: 'Free Trial Class',
+  //   benefits: [
+  //     'One Invite to Free Trial Class',
+  //     'No commitment required',
+  //     'No pressure to join',
+  //     'Invite a friend and receive one week of membership free'
+  //   ],
+  //   limitations: [],
+  //   prices: {
+  //     single: 0,
+  //     monthly: 0,
+  //     yearly: 0
+  //   },
+  //   stripeIds: {
+  //     single: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
+  //     monthly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
+  //     yearly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!
+  //   }
+  // },
   {
-    title: 'Trial Class(Free)',
-    description: 'Free Trial Class',
-    benefits: [
-      'One Invite to Free Trial Class',
-      'No commitment required',
-      'No pressure to join',
-      'Invite a friend and receive one week of membership free'
-    ],
-    limitations: [],
-    prices: {
-      single: 0,
-      monthly: 0,
-      yearly: 0
-    },
-    stripeIds: {
-      single: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
-      monthly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!,
-      yearly: process.env.NEXT_PUBLIC_STRIPE_SINGLE_CLASS_PLAN_ID!
-    }
-  },
-  {
-    title: 'Drop-ins',
+    title: 'Single',
     description: 'Purchase one drop-in or select a package of classes.',
     benefits: [
       'Purchase One drop-in Class or a Package',
@@ -34,7 +34,7 @@ export const pricingData: SubscriptionPlan[] = [
     limitations: [],
     prices: {
       single: 25,
-      monthly: 100,
+      monthly: null,
       yearly: 0
     },
     stripeIds: {
@@ -55,8 +55,8 @@ export const pricingData: SubscriptionPlan[] = [
     ],
     limitations: [],
     prices: {
-      single: 25,
-      monthly: 100,
+      single: 10,
+      monthly: 125,
       yearly: 1200
     },
     stripeIds: {

@@ -9,11 +9,11 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0)
   const [copied, setCopied] = useState(false)
   const terminalSteps = [
-    'Run Start...',
-    'Debugging-Limits.exe',
-    'Upgrading-Body',
-    'Hacking-Mindset',
-    'Optimizing.Confidence.lvl'
+    'Game Start...',
+    'Debug your Limits',
+    'Upgrade Your Body',
+    'Hacking Mindset',
+    'Optimize Confidence'
   ]
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export function Terminal() {
   }
 
   return (
-    <div className='relative mx-auto w-full rounded-lg text-sm text-white'>
+    <div className='relative mx-auto w-full max-w-lg rounded-lg text-sm text-white'>
       <div className='mx-auto w-full rounded-lg bg-neutral-900/50 shadow-xl dark:bg-neutral-900/10'>
         {/* <div className='flex items-center justify-between bg-neutral-800/10 p-1'> */}
         {/* <div className='flex space-x-1'>
@@ -54,9 +54,6 @@ export function Terminal() {
           </button> */}
         {/* </div> */}
         <div className='relative mx-auto w-full space-y-1 p-3 font-heading tracking-wide'>
-          {/* <div className='absolute -z-10 opacity-50'>
-            <Logo />
-          </div> */}
           {terminalSteps.map((step, index) => (
             <div
               key={index}
@@ -64,7 +61,8 @@ export function Terminal() {
                 index > terminalStep ? 'opacity-0' : 'opacity-100'
               } w-full text-left transition-opacity duration-300`}
             >
-              <span className='text-[10px] text-green-400'>$</span> {step}
+              <span className='text-md font-black text-green-400'>{`->`}</span>{' '}
+              {step}
             </div>
           ))}
         </div>

@@ -7,6 +7,7 @@ import { ThemeProvider } from 'next-themes'
 import { cn, constructMetadata } from '@/lib/utils'
 import { Toaster } from '@/components/ui/sonner'
 import { Analytics } from '@/components/analytics'
+import Hydrate from '@/components/Hydrate'
 import ModalProvider from '@/components/modals/providers'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 
@@ -19,17 +20,8 @@ export const metadata = constructMetadata()
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          'min-h-screen bg-background antialiased',
-          fontSans.variable,
-
-          headingFont.variable,
-          logoFont.variable,
-          genosFont.className
-        )}
-      >
+      {/* <head /> */}
+      <Hydrate>
         <SessionProvider>
           <ThemeProvider
             attribute='class'
@@ -42,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </ThemeProvider>
         </SessionProvider>
-      </body>
+      </Hydrate>
     </html>
   )
 }

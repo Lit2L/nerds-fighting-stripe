@@ -52,12 +52,12 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
           <div className='flex flex-row'>
             <div className='flex items-end'>
               <div className='flex text-left text-3xl font-semibold leading-6 text-emerald-500'>
-                {isYearly && offer.prices.monthly > 0 ? (
+                {isYearly && offer.prices.single! > 0 ? (
                   <>
                     <span className='mr-2 text-muted-foreground/80 line-through'>
                       ${offer.prices.monthly}
                     </span>
-                    <span>${offer.prices.yearly / 12}</span>
+                    <span>${offer.prices.yearly! / 12}</span>
                   </>
                 ) : (
                   `$${offer.prices.monthly}`
@@ -68,39 +68,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
               </div>
             </div>
           </div>
-          {offer.prices.monthly > 0 ? (
-            <div className='text-left text-sm text-muted-foreground'>
-              {isYearly
-                ? `$${offer.prices.yearly} will be charged when annual`
-                : 'when charged monthly'}
-            </div>
-          ) : null}
-        </div>
-        <div className='min-h-[150px] items-start space-y-4 bg-foreground/90 p-6'>
-          <p className='flex text-lg font-bold uppercase tracking-wider text-primary-foreground'>
-            {offer.title}
-          </p>
-
-          <div className='flex flex-row'>
-            <div className='flex items-end'>
-              <div className='flex text-left text-3xl font-semibold leading-6 text-emerald-500'>
-                {isYearly && offer.prices.monthly > 0 ? (
-                  <>
-                    <span className='mr-2 text-muted-foreground/80 line-through'>
-                      ${offer.prices.monthly}
-                    </span>
-                    <span>${offer.prices.yearly / 12}</span>
-                  </>
-                ) : (
-                  `$${offer.prices.monthly}`
-                )}
-              </div>
-              <div className='-mb-1 ml-2 text-left text-sm font-medium text-muted-foreground'>
-                <div>/month</div>
-              </div>
-            </div>
-          </div>
-          {offer.prices.monthly > 0 ? (
+          {offer.prices.monthly! > 0 ? (
             <div className='text-left text-sm text-muted-foreground'>
               {isYearly
                 ? `$${offer.prices.yearly} will be charged when annual`
@@ -170,7 +138,7 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
 
   return (
     <MaxWidthWrapper>
-      <section className='mt-28 flex flex-col items-center rounded-sm text-center'>
+      <section className='flex min-h-screen flex-col items-center justify-center rounded-sm text-center'>
         <HeaderSection label='Pricing' title='Join the Nerds Family!' />
 
         <div className='mb-4 mt-10 flex items-center'>

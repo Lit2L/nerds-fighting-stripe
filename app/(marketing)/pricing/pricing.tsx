@@ -31,9 +31,8 @@ export interface PricingTier {
 }
 
 export const frequencies: PricingTierFrequency[] = [
-  { id: '1', value: '1', label: 'Monthly', priceSuffix: '/month' },
-  { id: '2', value: '2', label: 'Daily', priceSuffix: '/day' },
-  { id: '3', value: '3', label: 'Deals', priceSuffix: '/package' }
+  { id: '1', value: '1', label: 'Members', priceSuffix: '/month' },
+  { id: '2', value: '2', label: 'Visitors', priceSuffix: '/day' }
 ]
 
 export const tiers: PricingTier[] = [
@@ -103,11 +102,14 @@ export function PricingTiers() {
             <h1 className='max-w-xs text-4xl font-semibold !leading-tight text-black dark:text-white sm:max-w-none md:text-6xl'>
               Pricing
             </h1>
-            <p className='mt-6 max-w-prose text-black dark:text-white md:text-xl lg:text-center'></p>
+            {/* <p className='mt-0 max-w-prose text-black dark:text-white md:text-xl lg:text-center'>
+              Join today and recieve a 25% discount on your first month of
+              training!
+            </p> */}
           </div>
 
           {bannerText ? (
-            <div className='my-4 flex w-full justify-center lg:w-auto'>
+            <div className='my-6 flex w-full justify-center lg:w-auto'>
               <p className='w-full rounded-xl bg-lime-100 px-4 py-3 text-xs text-black dark:bg-lime-300/30 dark:text-white/80'>
                 {bannerText}
               </p>
@@ -115,7 +117,7 @@ export function PricingTiers() {
           ) : null}
 
           {frequencies.length > 1 ? (
-            <div className='mt-16 flex justify-center'>
+            <div className='mt-6 flex justify-center'>
               <RadioGroup
                 defaultValue={frequency.value}
                 onValueChange={(value: string) => {

@@ -70,9 +70,9 @@ export function NavBar({ scroll = false }: NavBarProps) {
                   {item.title}
                 </Link>
               ))}
-              <ModeToggle />
             </nav>
           ) : null}
+          <ModeToggle />
         </div>
 
         <div className='flex items-center space-x-3'>

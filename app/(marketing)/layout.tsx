@@ -1,5 +1,5 @@
 import { Footer } from '@/components/layout/footer'
-import { NavMobile } from '@/components/layout/mobile-nav'
+import NavMobile from '@/components/layout/mobile-nav'
 import { NavBar } from '@/components/layout/navbar'
 
 interface MarketingLayoutProps {
@@ -13,7 +13,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
         <NavMobile />
         <NavBar scroll={true} />
       </header>
-      <main className='flex-1'>{children}</main>
+      <main className='mt-6 flex-1'>{children}</main>
       <Footer />
     </div>
   )

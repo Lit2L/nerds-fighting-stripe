@@ -1,8 +1,9 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { AnimatePresence, motion } from 'framer-motion'
 import React, { useCallback, useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+
+import { cn } from '@/lib/utils'
 
 export const FlipWords = ({
   words,
@@ -19,7 +20,7 @@ export const FlipWords = ({
   const startAnimation = useCallback(() => {
     const currentIndex = words.indexOf(currentWord)
     const nextIndex = (currentIndex + 1) % words.length
-    const word = words[nextIndex] ?? words[0] ?? ''
+    const word = words[nextIndex] ?? words[0] ?? ' '
     setCurrentWord(word)
     setIsAnimating(true)
   }, [currentWord, words])
@@ -68,12 +69,12 @@ export const FlipWords = ({
           position: 'absolute'
         }}
         className={cn(
-          'relative z-10 inline-block rounded-full px-2 text-left font-heading text-white ',
+          'relative z-10 inline-block rounded-full px-2 text-left font-heading text-white',
           className
         )}
         key={currentWord}
       >
-        {currentWord.split('').map((letter, index) => (
+        {currentWord.split(/(\s+)/).map((letter, index) => (
           <motion.span
             key={currentWord + index}
             initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}

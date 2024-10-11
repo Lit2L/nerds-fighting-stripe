@@ -102,27 +102,20 @@ export const About = () => {
                     <span className='gap-3 font-bold text-emerald-500'>
                       Nerds Fighting
                     </span>{' '}
-                    is a Muay Thai and Martial Arts training club and we provide
-                    a workout and a practice that will level up your body, your
-                    mind and spirit. Muay Thai and journey your personal growth
-                    through Muay Thai training.
+                    is a Muay Thai and Martial Arts club where we train for
+                    health, longevity, and personal growth. Muay Thai is a
+                    workout and a practice that will level up your body, your
+                    mind and spirit. For others it can also be a journey for
+                    your personal growth. We are a community of martial artists
+                    who are dedicated to helping you achieve your goals.
                   </p>
                 </div>
-                <div>
-                  <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    The math is simple; your quality life will depend on your
-                    ability to keep physically fit, mentally sharp and
-                    spiritually confident. The practice of Muay Thai is rich
-                    with wisdom, skills, techniques, challenges and the lessons
-                    that await for you to overcome on your journey. You can only
-                    win by trying, your future self will thank you.
-                  </p>
-                </div>
+
                 <div className=''>
                   <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    We specialize in training newbies and newcomers. We invite
-                    you to join us for a free trial class and decide if
-                    we&apos;re a good fit for you.
+                    We specialize in training newbies and newcomers. Join us for
+                    a free class to see if we&apos;re a good fit for you. You
+                    have nothing to lose and everything to gain!
                   </p>
                 </div>
               </div>

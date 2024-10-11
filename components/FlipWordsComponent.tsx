@@ -13,7 +13,7 @@ export function FlipWordsComponent() {
 
       <div className='mx-auto flex w-96 items-center justify-center'>
         <p className='text-center font-heading text-2xl font-semibold text-emerald-900 dark:text-emerald-500'>
-          Upgrading
+          Upgrade
         </p>
         <FlipWords words={words} />
       </div>

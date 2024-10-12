@@ -12,7 +12,7 @@ const faqData = [
     id: 'item-1',
     question: 'What can I expect during class?',
     answer:
-      'Workouts begin with a warm-up and stretch, technique and drills, and finish with conditioning. We also offer sparring and open gym time. We have a variety of classes to choose from, including boxing, Muay Thai, and fitness classes.'
+      'Workouts begin with a warm-up and stretch, technique and drills with some pad or heavy bag work, ending with some conditioning.'
   },
 
   {
@@ -40,19 +40,19 @@ const faqData = [
     id: 'item-4',
     question: `What if I can't make it through the workout?`,
     answer:
-      'Take a break at any time and for any reason. Workouts are designed to be as easy or as hard as you can handle. Just turn up or turn down your intensity.   Safety is our highest concern.'
+      'Take a break anytime you feel the need to.  Never feel the need to push yourself harder then you can handle. Take a break and hydrate at any time and for any reason. Workouts are designed to be as easy or as hard as you can handle. Just turn up or turn down your intensity.   We want you to be and feel safe at all times.'
   },
   {
     id: 'item-5',
     question: 'Do we have to spar?',
     answer:
-      'Everyone has the option to spar but is not mandatory. Safety is our highest concern.'
+      'No. Sparring is not at all required. We are only here to help you reach your goals. If you are interested in sparring, we have a separate sparring class.'
   },
   {
     id: 'item-6',
     question: 'Can I try the class before signing up?',
     answer:
-      'Yes! Come in for a free workout to see if it&apos;s a good fit for you.  First class is free.  You can sign up for a trial class on our website or by contacting us directly.'
+      'Absolutely! Come in for a free workout to see if it&apos;s a good fit for you.  First class is always free.  You can sign up for a trial class on our website or by contacting us directly.'
   }
 ]
 
@@ -73,7 +73,7 @@ export function FaqSection() {
         {faqData.map((faqItem) => (
           <AccordionItem key={faqItem.id} value={faqItem.id}>
             <AccordionTrigger>{faqItem.question}</AccordionTrigger>
-            <AccordionContent className='md:text-md rounded-xl bg-neutral-50 px-3 pt-3 text-secondary-foreground lg:m-3 lg:text-lg'>
+            <AccordionContent className='md:text-md rounded-xl bg-neutral-300 px-3 pt-3 text-primary-foreground lg:m-3 lg:text-lg'>
               {Array.isArray(faqItem.answer) ? (
                 <ul>
                   {faqItem.answer.map((item, index) => (

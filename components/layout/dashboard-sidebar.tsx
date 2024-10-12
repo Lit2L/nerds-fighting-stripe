@@ -99,7 +99,7 @@ export function DashboardSidebar({ links }: DashboardSidebarProps) {
                     className='flex flex-col gap-0.5'
                   >
                     {isSidebarExpanded ? (
-                      <p className='border-4 text-xl text-muted-foreground'>
+                      <p className='text-xl text-muted-foreground'>
                         {section.title}
                       </p>
                     ) : (

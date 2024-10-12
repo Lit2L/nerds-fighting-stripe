@@ -1,60 +1,70 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
-import { getCurrentUser } from '@/lib/session'
-import { getUserSubscriptionPlan } from '@/lib/subscription'
-import { constructMetadata } from '@/lib/utils'
-import AnimatedGradientText from '@/components/ui/animated-gradient-text'
-import { PricingCards } from '@/components/pricing/pricing-cards'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
+import { Icons } from '@/components/icons'
 
-import { PricingTiers } from './pricing'
+export const metadata = {
+  title: 'Pricing'
+}
 
-export const metadata = constructMetadata({
-  title: 'Pricing Nerds Fighting Subscription',
-  description: 'Explore our membership plans.'
-})
-
-export default async function PricingPage() {
-  const user = await getCurrentUser()
-
-  if (user?.role === 'ADMIN') {
-    return (
-      <div className='flex min-h-screen flex-col items-center justify-center'>
-        <AnimatedGradientText text='Pricing Page' />
-        <h1 className='text-5xl font-bold'>Seriously?</h1>
-        <Image
-          src='/_static/illustrations/call-waiting.svg'
-          alt='403'
-          width={560}
-          height={560}
-          className='pointer-events-none -my-20 dark:invert'
-        />
-        <p className='text-balance px-4 text-center text-2xl font-medium'>
-          You are an {user.role}. Back to{' '}
-          <Link
-            href='/admin'
-            className='text-muted-foreground underline underline-offset-4 hover:text-purple-500'
-          >
-            Dashboard
-          </Link>
-          .
+export default function PricingPage() {
+  return (
+    <section className='container flex flex-col gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24'>
+      <div className='mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]'>
+        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
+          Simple & transparent
+        </h2>
+        <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
+          Unlock all features including scheduling and class updates.
         </p>
       </div>
-    )
-  }
+      <div className='grid w-full items-start gap-10 rounded-lg border p-10 md:grid-cols-[1fr_200px]'>
+        <div className='grid gap-6'>
+          <h3 className='text-xl font-bold sm:text-2xl'>
+            What&apos;s included in the Membership plan
+          </h3>
+          <ul className='grid gap-3 text-sm text-muted-foreground sm:grid-cols-2'>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Unlimited Classes
+            </li>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Learn to Pad Hold
+            </li>
 
-  let subscriptionPlan
-  if (user && user.id) {
-    subscriptionPlan = await getUserSubscriptionPlan(user.id)
-  }
-
-  return (
-    <div className='flex w-full flex-col gap-16 py-8 md:py-8'>
-      {/* <PricingTiers /> */}
-      <PricingCards userId={user?.id} subscriptionPlan={subscriptionPlan} />
-      <hr className='container' />
-      {/* <ComparePlans />
-      <PricingFaq /> */}
-    </div>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Muay Thai, Boxing,
+              Kickboxing
+            </li>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Cardio and Strength
+            </li>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Limited Time Special
+              (-20%)
+            </li>
+            <li className='flex items-center'>
+              <Icons.check className='mr-2 h-4 w-4' /> Cancel Anytime
+            </li>
+          </ul>
+        </div>
+        <div className='flex flex-col gap-4 text-center'>
+          <div>
+            <h4 className='text-7xl font-bold'>$100</h4>
+            <p className='text-sm font-medium text-muted-foreground'>
+              Billed Monthly
+            </p>
+          </div>
+          <Link href='/login' className={cn(buttonVariants({ size: 'lg' }))}>
+            Create An Account to Begin
+          </Link>
+        </div>
+      </div>
+      <div className='mx-auto flex w-full max-w-[58rem] flex-col gap-4'>
+        <p className='max-w-[85%] leading-normal text-muted-foreground sm:leading-7'>
+          <strong>You can test the upgrade and won&apos;t be charged.</strong>
+        </p>
+      </div>
+    </section>
   )
 }

@@ -27,9 +27,7 @@ export function BillingFormButton({
   const stripeSessionAction = () =>
     startTransition(async () => await generateUserStripeSession())
 
-  const userOffer =
-    subscriptionPlan.stripePriceId ===
-    offer.stripeIds[year ? 'yearly' : 'monthly']
+  const userOffer = subscriptionPlan.isPro
 
   return (
     <Button

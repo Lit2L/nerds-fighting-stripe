@@ -58,38 +58,6 @@ export type DocsConfig = {
   sidebarNav: SidebarNavItem[]
 }
 
-// subcriptions
-export type SubscriptionPlan = {
-  title: string
-  description: string
-  benefits: string[]
-  limitations: string[]
-  prices: {
-    single: number | null
-    monthly: number | null
-    yearly: number | null
-  }
-  stripeIds: {
-    single: string | null
-    monthly: string | null
-    yearly: string | null
-  }
-}
-
-export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId' | 'stripePriceId'> & {
-    stripeCurrentPeriodEnd: number
-    isPaid: boolean
-    interval: 'single' | 'month' | 'year' | null
-    isCanceled?: boolean
-  }
-
-// compare plans
-export type ColumnType = string | boolean | null
-export type PlansRow = { feature: string; tooltip?: string } & {
-  [key in (typeof plansColumns)[number]]: ColumnType
-}
-
 // landing sections
 export type InfoList = {
   icon: keyof typeof Icons
@@ -117,3 +85,31 @@ export type TestimonialType = {
   image: string
   review: string
 }
+
+export type SubscriptionPlan = {
+  name: string
+  title: string;
+  description: string;
+  benefits: string[];
+  limitations: string[];
+  prices: {
+    monthly: number;
+    yearly: number;
+  };
+  stripeIds: {
+    monthly: string | null;
+    yearly: string | null;
+  };
+  description: string
+  stripeIds: {
+  stripePriceId: string
+}
+
+export type UserSubscriptionPlan = SubscriptionPlan &
+  Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId'> & {
+    stripeCurrentPeriodEnd: number
+    isPaid: boolean
+    isCanceled: boolean
+    title: string
+    isPro: boolean
+  }

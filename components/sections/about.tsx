@@ -102,20 +102,23 @@ export const About = () => {
                     <span className='gap-3 font-bold text-emerald-500'>
                       Nerds Fighting
                     </span>{' '}
-                    is a Muay Thai and Martial Arts club where we train for
-                    health, longevity, and personal growth. Muay Thai is a
-                    workout and a practice that will level up your body, your
-                    mind and spirit. For others it can also be a journey for
-                    your personal growth. We are a community of martial artists
-                    who are dedicated to helping you achieve your goals.
+                    is a Muay Thai and Martial Arts club where you can learn
+                    proper striking technique all while improving your
+                    cardiovascular health, strength, flexibility and mental
+                    toughness. We offer a variety of training options to fit
+                    your needs and goals. Whether you are just want to get your
+                    heart rate up, learn striking techniques or get in shape,
+                    Our coaching staff with over 17 years of experience in
+                    training and competition will help you reach your goals.
                   </p>
                 </div>
 
                 <div className=''>
                   <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    We specialize in training newbies and newcomers. Join us for
-                    a free class to see if we&apos;re a good fit for you. You
-                    have nothing to lose and everything to gain!
+                    We specialize in newbies and newcomers. No bullies or tough
+                    guys to worry about here. Join us for a free class and try
+                    us out for yourself. We are a new club and we are growing
+                    everyday.
                   </p>
                 </div>
               </div>

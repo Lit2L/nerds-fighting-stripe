@@ -63,7 +63,7 @@ export default function NavMobile() {
             links.length > 0 &&
             links.map(({ title, href }) => (
               <>
-                <li key={href} className='py-3'>
+                <li key={title} className='py-3'>
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}
@@ -77,7 +77,7 @@ export default function NavMobile() {
 
           {session ? (
             <>
-              {session.user.role === 'ADMIN' ? (
+              {session.user?.role === 'ADMIN' ? (
                 <li className='py-3'>
                   <Link
                     href='/admin'

@@ -6,7 +6,6 @@ import { Icons } from '@/components/shared/icons'
 
 import { FlipWordsComponent } from '../FlipWordsComponent'
 import Logo from '../Logo'
-import { Terminal } from '../terminal'
 import { Badge } from '../ui/badge'
 import GradualSpacing from '../ui/gradual-spacing'
 import RetroGrid from '../ui/retro-grid'

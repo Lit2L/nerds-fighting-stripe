@@ -72,7 +72,9 @@ export function NavBar({ scroll = false }: NavBarProps) {
               ))}
             </nav>
           ) : null}
-          <ModeToggle />
+          <div className='hidden items-center md:flex'>
+            <ModeToggle />
+          </div>
         </div>
 
         <div className='flex items-center space-x-3'>

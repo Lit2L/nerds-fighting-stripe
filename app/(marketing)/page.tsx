@@ -1,4 +1,4 @@
-import { CalendlyWidget } from '@/components/CalendlyPopup'
+import { CalendlyWidget } from '@/components/calendly/calendly-widget'
 import { About } from '@/components/sections/about'
 import { FaqSection } from '@/components/sections/faqs'
 import HeroLanding from '@/components/sections/hero-landing'

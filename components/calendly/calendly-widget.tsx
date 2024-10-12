@@ -13,6 +13,13 @@ export function CalendlyWidget() {
             backgroundColor: 'ffffff',
             border: '1px solid #00a2ff'
           }}
+          pageSettings={{
+            backgroundColor: 'ffffff',
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
+            primaryColor: '00a2ff',
+            textColor: '4d5055'
+          }}
         />
       </div>
     </div>

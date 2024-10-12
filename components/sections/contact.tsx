@@ -9,8 +9,8 @@ import { Icons } from '../shared/icons'
 export function Contact({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <div className={cn('border-t font-genos text-lg', className)}>
-      <div className='container grid max-w-6xl grid-cols-2 justify-between gap-6 rounded-lg border-4 bg-neutral-900 py-14'>
-        <div className='w-full rounded-lg border-4 p-6'>
+      <div className='container grid max-w-6xl grid-cols-2 justify-between gap-6 rounded-lg bg-neutral-900 py-14'>
+        <div className='w-full rounded-lg p-6'>
           {homeLinks.map((section) => (
             <div key={section.title}>
               <h4 className='text-2xl font-bold text-foreground'>

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useTransition } from 'react'
+import { useTransition } from 'react'
 import { generateUserStripe } from '@/actions/generate-user-stripe'
 import { SubscriptionPlan, UserSubscriptionPlan } from '@/types'
 
@@ -27,7 +27,9 @@ export function BillingFormButton({
   const stripeSessionAction = () =>
     startTransition(async () => await generateUserStripeSession())
 
-  const userOffer = subscriptionPlan.isPro
+  const userOffer =
+    subscriptionPlan.stripePriceId ===
+    offer.stripeIds[year ? 'yearly' : 'monthly']
 
   return (
     <Button

@@ -18,7 +18,7 @@ export const Footer = () => {
           <p className='text-left text-sm text-muted-foreground'>
             Built by{' '}
             <Link
-              href={siteConfig.links.williamsMma}
+              href={siteConfig.url}
               target='_blank'
               rel='noreferrer'
               className='font-semibold underline underline-offset-8'

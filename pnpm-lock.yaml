@@ -870,7 +870,7 @@ packages:
       hash-wasm: 4.11.0
       inflection: 3.0.0
       memfs: 4.13.0
-      oo-ascii-tree: 1.103.1
+      oo-ascii-tree: 1.104.0
       ts-pattern: 5.4.0
       type-fest: 4.26.1
     dev: false
@@ -1800,7 +1800,7 @@ packages:
       estree-util-to-js: 2.0.0
       estree-walker: 3.0.3
       hast-util-to-estree: 3.1.0
-      hast-util-to-jsx-runtime: 2.3.0
+      hast-util-to-jsx-runtime: 2.3.1
       markdown-extensions: 2.0.0
       periscopic: 3.1.0
       remark-mdx: 3.0.1
@@ -7539,8 +7539,8 @@ packages:
       stringify-entities: 4.0.4
       zwitch: 2.0.4
 
-  /hast-util-to-jsx-runtime@2.3.0:
-    resolution: {integrity: sha512-H/y0+IWPdsLLS738P8tDnrQ8Z+dj12zQQ6WC11TIM21C8WFVoIxcqWXf2H3hiTVZjF1AWqoimGwrTWecWrnmRQ==}
+  /hast-util-to-jsx-runtime@2.3.1:
+    resolution: {integrity: sha512-Rbemi1rzrkysSin0FDHZfsxYPoqLGHFfxFm28aOBHPibT7aqjy7kUgY636se9xbuCWUsFpWAYlmtGHQakiqtEA==}
     dependencies:
       '@types/estree': 1.0.6
       '@types/hast': 3.0.4
@@ -9206,8 +9206,8 @@ packages:
     dependencies:
       regex: 4.3.3
 
-  /oo-ascii-tree@1.103.1:
-    resolution: {integrity: sha512-X0nmbb8xUUi637JXzCxY/K4AtO/I0fB5b7iiGaHJHu8IXBWV8TnQ4xqa0Igb/NoAg3OP2uXNhSeiTsErETOA/g==}
+  /oo-ascii-tree@1.104.0:
+    resolution: {integrity: sha512-2cScXtwxt5WVIi3+vdkbKoHSeRepRcibnFhdV2ojGxVvj1KU0m0EHfBCsal6XEg1vBkMgTIxnxVd+E/l/Fam3w==}
     engines: {node: '>= 14.17.0'}
     dev: false
 

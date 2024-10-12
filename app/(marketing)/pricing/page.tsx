@@ -55,8 +55,11 @@ export default function PricingPage() {
               Billed Monthly
             </p>
           </div>
-          <Link href='/login' className={cn(buttonVariants({ size: 'lg' }))}>
-            Create An Account to Begin
+          <Link
+            href='/https://buy.stripe.com/test_cN2eWO0lj4M3bBudQR'
+            className={cn(buttonVariants({ size: 'lg' }))}
+          >
+            Subscribe Now
           </Link>
         </div>
       </div>

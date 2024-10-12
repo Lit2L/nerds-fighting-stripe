@@ -1,37 +1,28 @@
-import React from 'react'
 import { redirect } from 'next/navigation'
 
 import { getCurrentUser } from '@/lib/session'
-import { stripe } from '@/lib/stripe'
-import { getUserSubscriptionPlan } from '@/lib/subscriptions'
+import { getUserSubscriptionPlan } from '@/lib/subscription'
 import { constructMetadata } from '@/lib/utils'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { DashboardHeader } from '@/components/dashboard/header'
-import { BillingForm } from '@/components/forms/billing-form'
 import { BillingInfo } from '@/components/pricing/billing-info'
 import { Icons } from '@/components/shared/icons'
 
 export const metadata = constructMetadata({
-  title: 'Billing - Nerds Fighting',
+  title: 'Billing – SaaS Starter',
   description: 'Manage billing and your subscription plan.'
 })
 
 export default async function BillingPage() {
   const user = await getCurrentUser()
 
-  // if (!user && user.id && user.role === 'USER') {
-  if (!user && user.id && user.role === 'USER') {
+  let userSubscriptionPlan
+  if (user && user.id && user.role === 'USER') {
+    userSubscriptionPlan = await getUserSubscriptionPlan(user.id)
+  } else {
     redirect('/login')
   }
-  const subscriptionPlan = await getUserSubscriptionPlan(user.id)
-  // If user has a pro plan, check cancel status on Stripe.
-  let isCanceled = false
-  if (subscriptionPlan.isPro && subscriptionPlan.stripeSubscriptionId) {
-    const stripePlan = await stripe.subscriptions.retrieve(
-      subscriptionPlan.stripeSubscriptionId
-    )
-    isCanceled = stripePlan.cancel_at_period_end
-  }
+
   return (
     <>
       <DashboardHeader
@@ -41,17 +32,22 @@ export default async function BillingPage() {
       <div className='grid gap-8'>
         <Alert className='!pl-14'>
           <Icons.warning />
-          <AlertTitle>Payments are in Test Mode</AlertTitle>
+          <AlertTitle>This is a demo app.</AlertTitle>
           <AlertDescription className='text-balance'>
-            Nerds-Fighting app is using a Stripe test environment.
+            SaaS Starter app is a demo app using a Stripe test environment. You
+            can find a list of test card numbers on the{' '}
+            <a
+              href='https://stripe.com/docs/testing#cards'
+              target='_blank'
+              rel='noreferrer'
+              className='font-medium underline underline-offset-8'
+            >
+              Stripe docs
+            </a>
+            .
           </AlertDescription>
         </Alert>
-        <BillingForm
-          subscriptionPlan={{
-            ...subscriptionPlan,
-            isCanceled
-          }}
-        />
+        <BillingInfo userSubscriptionPlan={userSubscriptionPlan} />
       </div>
     </>
   )

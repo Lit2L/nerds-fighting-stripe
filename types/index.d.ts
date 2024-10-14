@@ -53,28 +53,44 @@ export type DocsConfig = {
 }
 
 // subcriptions
+
 export type SubscriptionPlan = {
-  title: string
+  name: string
   description: string
-  benefits: string[]
-  limitations: string[]
-  prices: {
-    monthly: number
-    yearly: number
-  }
-  stripeIds: {
-    monthly: string | null
-    yearly: string | null
-  }
+  stripePriceId: string
 }
 
 export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId' | 'stripePriceId'> & {
+  Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId'> & {
     stripeCurrentPeriodEnd: number
-    isPaid: boolean
-    interval: 'month' | 'year' | null
     isCanceled?: boolean
+    isPaid: boolean
+    isPro: boolean
   }
+
+// export type SubscriptionPlan = {
+
+//   title: string
+//   description: string
+//   benefits: string[]
+//   limitations: string[]
+//   prices: {
+//     monthly: number
+//     yearly: number
+//   }
+//   stripeIds: {
+//     monthly: string | null
+//     yearly: string | null
+//   }
+// }
+
+// export type UserSubscriptionPlan = SubscriptionPlan &
+//   Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId' | 'stripePriceId'> & {
+//     stripeCurrentPeriodEnd: number
+//     isPaid: boolean
+//     interval: 'month' | 'year' | null
+//     isCanceled?: boolean
+//   }
 
 // compare plans
 export type ColumnType = string | boolean | null

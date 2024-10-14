@@ -10,9 +10,9 @@ import { HeaderSection } from '../shared/header-section'
 const faqData = [
   {
     id: 'item-1',
-    question: 'What can I expect during class?',
+    question: 'What kind of workout is this?',
     answer:
-      'Workouts begin with a warm-up and stretch, technique and drills with some pad or heavy bag work, ending with some conditioning.'
+      'We have a wide variety of kickboxing, muay thai and boxing workouts that utilize the heavy bag, focus mitts, thai pads, body weight exercises and more.   Workouts also include with a warm-up, stretch and conditioning drills followed by 30 minutes of open gym time.'
   },
 
   {
@@ -31,28 +31,21 @@ const faqData = [
 
   {
     id: 'item-3',
-    question: 'Are drop-ins available?',
-    answer:
-      'Absolutely! We offer drop-in classes for $25 per class. You can pay at the gym via cash, venmo or zelle or online via our website.'
+    question: 'Do I have to spar?',
+    answer: 'Nope. Sparring is never required.'
   },
 
   {
     id: 'item-4',
-    question: `What if I can't make it through the workout?`,
+    question: 'Can I try a class?',
     answer:
-      'Take a break anytime you feel the need to.  Never feel the need to push yourself harder then you can handle. Take a break and hydrate at any time and for any reason. Workouts are designed to be as easy or as hard as you can handle. Just turn up or turn down your intensity.   We want you to be and feel safe at all times.'
+      'Yes! Come in for a workout and train with us. First class is always free.  You can sign up for a trial class on our website or by contacting us directly.'
   },
   {
     id: 'item-5',
-    question: 'Do we have to spar?',
+    question: 'Are drop-in classes available?',
     answer:
-      'No. Sparring is not at all required. We are only here to help you reach your goals. If you are interested in sparring, we have a separate sparring class.'
-  },
-  {
-    id: 'item-6',
-    question: 'Can I try the class before signing up?',
-    answer:
-      'Absolutely! Come in for a free workout to see if it&apos;s a good fit for you.  First class is always free.  You can sign up for a trial class on our website or by contacting us directly.'
+      'Yes! We have drop-ins for $25 per class. You can pay at the gym via cash, venmo or zelle or online via our website.'
   }
 ]
 

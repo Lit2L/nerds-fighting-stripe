@@ -4,6 +4,8 @@ import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/shared/icons'
 
+import { AnimatedJoinButton } from '../AnimatedJoinButton'
+import { AnimatedMembersButton } from '../AnimatedMembersButton'
 import { FlipWordsComponent } from '../FlipWordsComponent'
 import Logo from '../Logo'
 import { Badge } from '../ui/badge'
@@ -38,19 +40,8 @@ export default async function HeroLanding() {
           className='flex justify-center space-x-2 md:space-x-4'
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
-          <Link
-            href='/pricing'
-            prefetch={true}
-            className={cn(
-              buttonVariants({ size: 'lg', rounded: 'full' }),
-              'gap-2'
-            )}
-          >
-            <span className='font-genos text-lg font-bold uppercase'>
-              Initiate-Training
-            </span>
-            <Icons.arrowRight className='size-4' />
-          </Link>
+          <AnimatedJoinButton />
+          <AnimatedMembersButton />
         </div>
       </div>
     </section>

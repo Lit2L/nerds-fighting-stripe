@@ -63,7 +63,7 @@ export default function NavMobile() {
             links.length > 0 &&
             links.map(({ title, href }) => (
               <>
-                <li key={title} className='py-3'>
+                <li key={href} className='py-3'>
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}

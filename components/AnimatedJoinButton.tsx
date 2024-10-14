@@ -7,7 +7,7 @@ export async function AnimatedJoinButton() {
   return (
     <div className='z-10 flex items-center justify-center'>
       <Link
-        href='https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
+        href='https://calendly.com/spiderbear714/free-trial-class'
         className={cn(
           'group flex h-10 w-60 scale-100 items-center rounded-lg border-2 border-black/5 bg-neutral-600 transition-all ease-in hover:scale-95 hover:cursor-pointer hover:border-double hover:border-orange-900 hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800'
         )}
@@ -17,7 +17,7 @@ export async function AnimatedJoinButton() {
             🥊
           </span>
           <span className='text-md font-heading capitalize'>
-            Initiate Training
+            Start Training
           </span>
 
           <span className='ml-4 transition-transform ease-in-out group-hover:-translate-x-2'>

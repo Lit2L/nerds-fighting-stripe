@@ -15,7 +15,7 @@ export async function AnimatedMembersButton() {
       >
         <AnimatedShinyText className='flex items-center justify-center px-3 py-0.5 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400'>
           <CalendarHeart className='mr-4 size-4 scale-x-[-.9] text-blue-300 transition-transform ease-in-out group-hover:translate-x-2' />
-          <span className='text-md font-heading'>Book</span>
+          <span className='text-md font-heading'>Book Private</span>
 
           <Pencil className='ml-4 size-4 text-yellow-600 transition-transform ease-in-out group-hover:-translate-x-2' />
         </AnimatedShinyText>

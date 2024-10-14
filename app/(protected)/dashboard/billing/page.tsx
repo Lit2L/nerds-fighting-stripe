@@ -1,6 +1,8 @@
 import { redirect } from 'next/navigation'
+import { auth } from '@/auth'
 
 import { getCurrentUser } from '@/lib/session'
+import { stripe } from '@/lib/stripe'
 import { getUserSubscriptionPlan } from '@/lib/subscription'
 import { constructMetadata } from '@/lib/utils'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
@@ -14,15 +16,18 @@ export const metadata = constructMetadata({
 })
 
 export default async function BillingPage() {
-  const user = await getCurrentUser()
+  const user = await auth()
 
-  let userSubscriptionPlan
-  if (user && user.id && user.role === 'USER') {
-    userSubscriptionPlan = await getUserSubscriptionPlan(user.id)
-  } else {
-    redirect('/login')
+  const subscriptionPlan = await getUserSubscriptionPlan(user?.user.id!)
+
+  // If user has a pro plan, check cancel status on Stripe.
+  let isCanceled = false
+  if (subscriptionPlan.isPro && subscriptionPlan.stripeSubscriptionId) {
+    const stripePlan = await stripe.subscriptions.retrieve(
+      subscriptionPlan.stripeSubscriptionId
+    )
+    isCanceled = stripePlan.cancel_at_period_end
   }
-
   return (
     <>
       <DashboardHeader
@@ -47,7 +52,9 @@ export default async function BillingPage() {
             .
           </AlertDescription>
         </Alert>
-        <BillingInfo userSubscriptionPlan={userSubscriptionPlan} />
+        <BillingInfo
+          userSubscriptionPlan={{ ...subscriptionPlan, isCanceled }}
+        />
       </div>
     </>
   )

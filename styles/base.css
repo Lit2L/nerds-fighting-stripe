@@ -18,6 +18,9 @@
   --blendmode-effect: difference;
   --bg-blur: 0px;
   --font-size-list-item: 18px;
+  --brandgreen: #319e76;
+  --brandred: #ec0d1c;
+  --branddark: #212427;
 }
 
 body {

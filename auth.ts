@@ -2,6 +2,7 @@ import authConfig from '@/auth.config'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import { UserRole } from '@prisma/client'
 import NextAuth, { type DefaultSession } from 'next-auth'
+import Stripe from 'stripe'
 
 import { prisma } from '@/lib/db'
 import { getUserById } from '@/lib/user'
@@ -25,8 +26,27 @@ export const {
     signIn: '/login'
     // error: "/auth/error",
   },
+  events: {
+    createUser: async ({ user }) => {
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+        apiVersion: '2024-04-10'
+      })
+
+      if (user.email && user.name) {
+        const customer = await stripe.customers.create({
+          email: user.email,
+          name: user.name
+        })
+
+        await prisma.user.update({
+          where: { id: user.id },
+          data: { stripeCustomerId: customer.id }
+        })
+      }
+    }
+  },
   callbacks: {
-    async session({ token, session }) {
+    async session({ token, session, user }) {
       if (session.user) {
         if (token.sub) {
           session.user.id = token.sub

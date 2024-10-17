@@ -35,24 +35,24 @@ export const MagicLinkEmail = ({
       <Body className='bg-white font-sans'>
         <Container className='mx-auto py-5 pb-12'>
           <Icons.logo className='m-auto block size-10' />
-          <Text className='text-base'>Hi {firstName},</Text>
-          <Text className='text-base'>
+          <Text className='text-dark-500'>Hi {firstName},</Text>
+          <Text className='text-dark-500'>
             Welcome to {siteName} ! Click the link below to{' '}
             {mailType === 'login' ? 'sign in to' : 'activate'} your account.
           </Text>
           <Section className='my-5 text-center'>
             <Button
-              className='inline-block rounded-md bg-zinc-900 px-4 py-2 text-base text-white no-underline'
+              className='inline-block rounded-md bg-zinc-900 px-4 py-2 text-dark-500 text-white no-underline'
               href={actionUrl}
             >
               {mailType === 'login' ? 'Sign in' : 'Activate Account'}
             </Button>
           </Section>
-          <Text className='text-base'>
+          <Text className='text-dark-500'>
             This link expires in 24 hours and can only be used once.
           </Text>
           {mailType === 'login' ? (
-            <Text className='text-base'>
+            <Text className='text-dark-500'>
               If you did not try to log into your account, you can safely ignore
               it.
             </Text>

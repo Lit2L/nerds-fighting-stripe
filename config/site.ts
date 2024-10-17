@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
     williamsMma: 'https://williamsmma.com/',
     github: 'https://github.com/mickasmt/next-saas-stripe-starter'
   },
-  mailSupport: 'support@saas-starter.com'
+  mailSupport: 'larryl@nerdsfighting.com'
 }
 
 export const homeLinks: HomeLinks[] = [

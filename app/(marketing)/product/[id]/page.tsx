@@ -5,7 +5,7 @@ import priceFormat from '@/lib/priceFormat'
 import AddCartBtn from '@/components/addCartBtn'
 
 export default async function ProductPage({ searchParams }: SearchParamTypes) {
-  // console.log('searchParams: ', searchParams);
+  console.log('searchParams: ', searchParams)
   return (
     <div className='flex max-w-4xl flex-col gap-8 md:flex-row'>
       <Image

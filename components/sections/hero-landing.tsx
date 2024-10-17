@@ -29,7 +29,7 @@ export default async function HeroLanding() {
         />
         <div className='h-54 w-72'>
           <Logo />
-          <span className=''>Train For Life</span>
+          <span className='text-xl text-black'>Train For Life</span>
         </div>
         <div className='w-full max-w-3xl rounded-sm p-3'>
           {/* <Terminal /> */}

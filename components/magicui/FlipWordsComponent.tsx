@@ -12,7 +12,7 @@ export function FlipWordsComponent() {
 
   return (
     <div className='flex w-full items-center justify-center px-4'>
-      <div className='mx-auto w-full text-center text-3xl font-bold font-heading tracking-tight text-white'>
+      <div className='mx-auto w-full text-center font-heading text-3xl font-bold tracking-tight text-white'>
         <p className='my-6'>Run start...</p>
         <FlipWords words={words} />
       </div>

@@ -32,20 +32,26 @@ const faqData = [
   {
     id: 'item-3',
     question: 'Do I have to spar?',
-    answer: 'Nope. Sparring is never required.'
+    answer: 'Nope. Sparring is never required. '
   },
 
   {
     id: 'item-4',
     question: 'Can I try a class?',
     answer:
-      'Yes! Come in for a workout and train with us. First class is always free.  You can sign up for a trial class on our website or by contacting us directly.'
+      'Come in today and get the first week free.   You can sign up via website or by contacting us directly .'
   },
   {
     id: 'item-5',
     question: 'Are drop-in classes available?',
     answer:
       'Yes! We have drop-ins for $25 per class. You can pay at the gym via cash, venmo or zelle or online via our website.'
+  },
+  {
+    id: 'item-6',
+    question: 'How do i sign up?',
+    answer:
+      'Join today for a grand opening special and pay $75/month, normally $125 a month with no contract, no enrollment fees. Your class starts when you get here. We run you through a workout consisting of cardio, technique and application (bag work, pad work, partner drills, and sparring(optional)). Beginners and advanced train the same just focus on different aspects. First week is free. Give yourself 1 1/2 hours to train.'
   }
 ]
 

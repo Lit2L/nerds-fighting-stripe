@@ -12,8 +12,8 @@ export type responseAction = {
   stripeUrl?: string
 }
 
-const billingUrl = absoluteUrl('/dashboard/billing')
-// const billingUrl = absoluteUrl('/pricing')
+// const billingUrl = absoluteUrl("/dashboard/billing")
+const billingUrl = absoluteUrl('/pricing')
 
 export async function generateUserStripe(
   priceId: string
@@ -30,7 +30,7 @@ export async function generateUserStripe(
 
     const subscriptionPlan = await getUserSubscriptionPlan(user.id)
 
-    if (subscriptionPlan.isPro && subscriptionPlan.stripeCustomerId) {
+    if (subscriptionPlan.isPaid && subscriptionPlan.stripeCustomerId) {
       // User on Paid Plan - Create a portal session to manage subscription.
       const stripeSession = await stripe.billingPortal.sessions.create({
         customer: subscriptionPlan.stripeCustomerId,

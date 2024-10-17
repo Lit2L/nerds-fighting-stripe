@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 export const FlipWords = ({
   words,
-  duration = 1500,
+  duration = 3000,
   className
 }: {
   words: string[]
@@ -54,7 +54,7 @@ export const FlipWords = ({
           y: 0
         }}
         transition={{
-          duration: 0.4,
+          duration: 0.9,
           ease: 'easeInOut',
           type: 'spring',
           stiffness: 100,
@@ -64,12 +64,12 @@ export const FlipWords = ({
           opacity: 0,
           y: -40,
           x: 40,
-          filter: 'blur(8px)',
+          filter: 'blur(16px)',
           scale: 3,
           position: 'absolute'
         }}
         className={cn(
-          'relative z-10 inline-block rounded-full px-2 text-left text-3xl font-heading font-bold text-black ',
+          'relative z-10 inline-block rounded-full px-2 text-left font-heading text-3xl font-bold text-black',
           className
         )}
         key={currentWord}
@@ -83,7 +83,7 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.4
             }}
-            className='inline-block font-heading text-white/90 bg-clip-text text-3xl font-bold  '
+            className='inline-block bg-clip-text font-heading text-3xl font-bold text-white/90'
           >
             {letter}
           </motion.span>

@@ -26,7 +26,7 @@ export function BlogHeaderLayout() {
           <h1 className='font-heading text-3xl md:text-4xl'>
             {data?.title || 'Blog'}
           </h1>
-          <p className='mt-3.5 text-base text-muted-foreground md:text-lg'>
+          <p className='mt-3.5 text-dark-500 md:text-lg'>
             {data?.description ||
               'Latest news and updates from Next SaaS Starter.'}
           </p>

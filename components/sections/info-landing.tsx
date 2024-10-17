@@ -24,9 +24,7 @@ export default function InfoLanding({
           <h2 className='font-heading text-2xl text-foreground md:text-4xl lg:text-[40px]'>
             {data.title}
           </h2>
-          <p className='mt-4 text-base text-muted-foreground'>
-            {data.description}
-          </p>
+          <p className='mt-4 text-dark-500'>{data.description}</p>
 
           <dl className='mt-6 space-y-4 leading-7'>
             {data.list.map((item, index) => {

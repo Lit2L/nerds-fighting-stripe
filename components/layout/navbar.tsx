@@ -21,6 +21,7 @@ import { ModalContext } from '@/components/modals/providers'
 import { Icons } from '@/components/shared/icons'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 
+import Cart from '../Cart'
 import Logo from '../Logo'
 import { ModeToggle } from '../ui/mode-toggle'
 
@@ -82,9 +83,9 @@ export function NavBar({ scroll = false }: NavBarProps) {
               ))}
             </nav>
           ) : null}
-          <div className='hidden items-center md:flex'>
+          <div className='mr-3 hidden items-center md:flex'>
             <ModeToggle />
-            <ul className='flex items-center justify-center gap-8'>
+            <ul className='ml-3 flex items-center justify-center gap-8'>
               <li
                 className='relative cursor-pointer text-3xl'
                 onClick={() => cartStore.toggleCart()}
@@ -97,7 +98,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                       animate={{ scale: 1 }}
                       initial={{ scale: 0 }}
                       exit={{ scale: 0 }}
-                      className='absolute bottom-4 left-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-white shadow-md'
+                      className='absolute bottom-4 left-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-black shadow-md'
                     >
                       {cartStore.cart.length}
                     </motion.span>
@@ -131,6 +132,10 @@ export function NavBar({ scroll = false }: NavBarProps) {
                 </div>
               )} */}
             </ul>
+            <AnimatePresence>
+              {/* Required condition when a component is removed from React tree */}
+              {cartStore.isOpen && <Cart />}
+            </AnimatePresence>
           </div>
         </div>
 

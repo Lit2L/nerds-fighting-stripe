@@ -3,21 +3,6 @@
 import Image from 'next/image'
 import emptyBasket from '@/public/shopping-cart-empty.png'
 import { useCartStore } from '@/zustand/store'
-// FRAMER: USING THE LAYOUT PROP ⭐️
-// Setting `layout` prop to `true` enables an element to automatically animate to
-// its new position when its layout changes. The animation is efficient and uses
-// the CSS `transform` property. However, it can cause visual distortions on the
-// children elements and certain CSS properties like boxShadow and borderRadius.
-
-// To fix the distortions, add the `layout` prop to those child elements as well.
-// If boxShadow and borderRadius are already being animated on the parent, they
-// will auto-correct. Otherwise, set them directly via the initial prop.
-
-// Setting `layout` to "position", the component will animate its position while
-// the size changes instantly. Setting a "size" will make the size animate while
-// position changes instantly. A `layout` set to "preserve-aspect" components is
-// going to animate both size and position if the aspect ratio remains constant,
-// and only position if the ratio changes.
 import { motion } from 'framer-motion'
 import { CgClose } from 'react-icons/cg'
 import { TbSquareRoundedMinus, TbSquareRoundedPlus } from 'react-icons/tb'
@@ -41,18 +26,18 @@ export default function Cart() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={() => cartStore.toggleCart()}
-      className='fixed bottom-0 left-0 right-0 top-0 z-50 h-screen w-full bg-black/25 backdrop-blur-sm'
+      className='fixed bottom-0 left-0 right-0 top-0 z-50 h-screen w-full bg-dark-800/50 text-black backdrop-blur-sm'
     >
       {/* Shopping Panel */}
       <motion.section
         layout
         onClick={(e) => e.stopPropagation()}
-        className='bg-base-100 absolute right-0 top-0 h-screen w-8/12 overflow-y-scroll p-12 shadow-md lg:w-2/5'
+        className='absolute right-0 top-0 h-screen w-8/12 overflow-y-scroll bg-dark-100 p-12 shadow-md lg:w-2/5'
       >
         {/* Conditional Headings */}
         {cartStore.onCheckout === 'cart' && (
           <div className='mb-12 flex items-center justify-between'>
-            <h1 className='text-2xl font-bold'>Your shopping cart</h1>
+            <p className='text-2xl font-bold'>Your shopping cart</p>
             <CgClose
               className='h-6 w-6 cursor-pointer'
               onClick={() => cartStore.toggleCart()}
@@ -77,7 +62,7 @@ export default function Cart() {
               <motion.article
                 key={item.id}
                 layout
-                className='bg-base-200 mt-3 flex gap-4 rounded-lg p-4'
+                className='mt-3 flex gap-4 rounded-lg bg-dark-200 p-4'
               >
                 <Image
                   className='h-24 w-24 rounded-full object-cover shadow'
@@ -88,9 +73,9 @@ export default function Cart() {
                   priority
                 />
                 <motion.div className='flex flex-col'>
-                  <h2 className='text-sm font-semibold'>{item.name}</h2>
+                  <h3 className='text-sm font-semibold'>{item.name}</h3>
                   <div className='flex items-center gap-2'>
-                    <h2 className='text-sm'>Qty: {item.quantity}</h2>
+                    <p className='text-sm'>Qty: {item.quantity}</p>
                     <button onClick={() => cartStore.removeProduct(item)}>
                       <TbSquareRoundedMinus className='h-3 w-3 cursor-pointer transition duration-100 ease-in-out hover:scale-125 hover:text-red-500 hover:drop-shadow-md' />
                     </button>
@@ -98,9 +83,9 @@ export default function Cart() {
                       <TbSquareRoundedPlus className='h-3 w-3 cursor-pointer transition duration-100 ease-in-out hover:scale-125 hover:text-green-500 hover:drop-shadow-md' />
                     </button>
                   </div>
-                  <h2 className='mt-auto text-sm'>
+                  <p className='mt-auto text-sm'>
                     {item.unit_amount && priceFormat(item.unit_amount)}
-                  </h2>
+                  </p>
                 </motion.div>
               </motion.article>
             ))}
@@ -142,7 +127,7 @@ export default function Cart() {
               priority
               className='object-cover'
             />
-            <h2 className='text-lg font-semibold'>Ohh no its empty :(</h2>
+            <p className='text-lg font-semibold'>Ohh no its empty :(</p>
           </motion.div>
         )}
       </motion.section>

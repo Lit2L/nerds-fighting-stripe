@@ -20,7 +20,7 @@ export default function Testimonials() {
                 <div className='flex flex-col px-4 py-5 sm:p-6'>
                   <div>
                     <div className='relative mb-4 flex items-center gap-3'>
-                      <span className='relative inline-flex size-10 items-center justify-center rounded-full text-base'>
+                      <span className='relative inline-flex size-10 items-center justify-center rounded-full text-dark-500'>
                         <Image
                           width={100}
                           height={100}

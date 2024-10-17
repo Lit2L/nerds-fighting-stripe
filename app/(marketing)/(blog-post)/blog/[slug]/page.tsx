@@ -113,9 +113,7 @@ export default async function PostPage({
           <h1 className='font-heading text-3xl text-foreground sm:text-4xl'>
             {post.title}
           </h1>
-          <p className='text-base text-muted-foreground md:text-lg'>
-            {post.description}
-          </p>
+          <p className='text-dark-500 md:text-lg'>{post.description}</p>
           <div className='flex flex-nowrap items-center space-x-5 pt-1 md:space-x-8'>
             {post.authors.map((author) => (
               <Author username={author} key={post._id + author} />

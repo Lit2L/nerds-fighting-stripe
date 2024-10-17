@@ -83,18 +83,18 @@ export const About = () => {
           </div>
 
           <div className='flex -translate-y-24 flex-col items-center justify-center rounded-full py-20'>
-            <h3 className='pt-36 text-center font-heading text-lg'>
+            <h3 className='pt-36 text-center font-heading text-lg text-white'>
               Nerds Fighting
               <FaYinYang className='-z-10 mx-auto my-1 size-12' />
             </h3>
-            <p className='text-md text-center font-light text-gray-500'>
+            <p className='text-md text-center font-light text-dark-100 dark:text-dark-100'>
               Train for Life
             </p>
 
             <div className='my-12 h-full max-w-2xl rounded-3xl border border-gray-500/20 bg-zinc-900/70 drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left'>
                 <p className='text-left text-xl font-bold text-white dark:text-white'>
-                  Who We Are
+                  Train For Life{' '}
                 </p>
                 <div>
                   <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
@@ -102,23 +102,24 @@ export const About = () => {
                     <span className='gap-3 font-bold text-emerald-500'>
                       Nerds Fighting
                     </span>{' '}
-                    is a Muay Thai and Martial Arts club where you can learn
-                    proper striking technique all while improving your
-                    cardiovascular health, strength, flexibility and mental
-                    toughness. We offer a variety of training options to fit
-                    your needs and goals. Whether you are just want to get your
-                    heart rate up, learn striking techniques or get in shape,
-                    Our coaching staff with over 17 years of experience in
-                    training and competition will help you reach your goals.
+                    is about developing people through the art of Boxing and
+                    Muay Thai kickboxing. Our vision is to provide quality Muay
+                    Thai and Boxing training that will leave you stronger,
+                    healthier, more confidence with the skills of a fighter. We
+                    have an approach to fighting that emphasizes technique,
+                    strategy and skills over brute force and speed. Instead of
+                    simply over powering your opponent, we want you to
+                    methodically break them down. Whether your goal is to fight
+                    in the ring someday, protect yourself on the street, or just
+                    enjoy want to get in shape while having fun doing it, we
+                    have something for you.
                   </p>
-                </div>
-
-                <div className=''>
                   <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    We specialize in newbies and newcomers. No bullies or tough
-                    guys to worry about here. Join us for a free class and try
-                    us out for yourself. We are a new club and we are growing
-                    everyday.
+                    Ego&apos;s are checked at the door. No bullies or tough guys
+                    here. Our Coaches are there to guide you through training so
+                    that you are always learning and always improving. Join us
+                    for a free week trial period. We&apos;re a new club and we
+                    look forward to training with you.
                   </p>
                 </div>
               </div>

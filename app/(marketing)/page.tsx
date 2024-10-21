@@ -32,7 +32,8 @@ const getProducts = async () => {
 export default async function IndexPage() {
   const products = await getProducts()
   return (
-    <div className='mx-auto w-full sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl'>
+    // <div className='mx-auto w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl'>
+    <div className='mx-auto w-full'>
       <HeroLanding />
       <About />
       <Training />
@@ -40,7 +41,7 @@ export default async function IndexPage() {
       <Schedule />
       <Testimonials />
       <NewClientFormSection />
-      <main className='grid-cols-fluid grid gap-8 pb-4'>
+      <main className='grid-cols-fluid container grid gap-8 pb-4'>
         {products.map((product) => (
           <Product {...product} key={product.id} />
         ))}

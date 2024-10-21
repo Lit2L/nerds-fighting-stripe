@@ -1,6 +1,6 @@
 'use client'
 
-import { AnimatePresence, Variants, motion } from 'framer-motion'
+import { AnimatePresence, motion, Variants } from 'framer-motion'
 
 import { cn } from '@/lib/utils'
 
@@ -34,7 +34,7 @@ export default function GradualSpacing({
             variants={framerProps}
             transition={{ duration, delay: i * delayMultiple }}
             className={cn(
-              'text-2xl sm:text-3xl md:text-5xl lg:text-6xl -tracking-[8px] font-bold',
+              'text-2xl font-bold -tracking-[8px] sm:text-3xl md:text-5xl lg:text-6xl',
               className
             )}
           >

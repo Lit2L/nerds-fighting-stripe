@@ -28,9 +28,9 @@ export const pricingData: SubscriptionPlan[] = [
   },
   {
     title: 'Pro',
-    description: 'Unlock Advanced Features',
+    description: 'Nerds Fighting Membership',
     benefits: [
-      'Up to 500 monthly posts',
+      'Unlimited classes',
       'Advanced analytics and reporting',
       'Access to business templates',
       'Priority customer support',

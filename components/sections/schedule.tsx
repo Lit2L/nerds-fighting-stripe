@@ -78,7 +78,7 @@ const classes = [
 
 export function Schedule() {
   return (
-    <section className=''>
+    <section className='container'>
       <div className='bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] py-32 font-genos dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'>
         <MaxWidthWrapper>
           <HeaderSection

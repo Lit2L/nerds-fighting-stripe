@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, Variants, motion } from 'framer-motion'
+import { AnimatePresence, motion, Variants } from 'framer-motion'
 
 import { cn } from '@/lib/utils'
 
@@ -39,35 +39,38 @@ export default function HyperText({
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (!animateOnLoad && isFirstRender.current) {
-        clearInterval(interval)
-        isFirstRender.current = false
-        return
-      }
-      if (interations.current < text.length) {
-        setDisplayText((t) =>
-          t.map((l, i) =>
-            l === ' '
-              ? l
-              : i <= interations.current
-              ? text[i]
-              : alphabets[getRandomInt(26)]
+    const interval = setInterval(
+      () => {
+        if (!animateOnLoad && isFirstRender.current) {
+          clearInterval(interval)
+          isFirstRender.current = false
+          return
+        }
+        if (interations.current < text.length) {
+          setDisplayText((t) =>
+            t.map((l, i) =>
+              l === ' '
+                ? l
+                : i <= interations.current
+                  ? text[i]
+                  : alphabets[getRandomInt(26)]
+            )
           )
-        )
-        interations.current = interations.current + 0.1
-      } else {
-        setTrigger(false)
-        clearInterval(interval)
-      }
-    }, duration / (text.length * 10))
+          interations.current = interations.current + 0.1
+        } else {
+          setTrigger(false)
+          clearInterval(interval)
+        }
+      },
+      duration / (text.length * 10)
+    )
     // Clean up interval on unmount
     return () => clearInterval(interval)
   }, [text, duration, trigger, animateOnLoad])
 
   return (
     <div
-      className='overflow-hidden py-2 flex cursor-default scale-100'
+      className='flex scale-100 cursor-default overflow-hidden py-2'
       onMouseEnter={triggerAnimation}
     >
       <AnimatePresence mode='wait'>

@@ -1,12 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { Brain, Dumbbell, Menu, Shield, Swords } from 'lucide-react'
 import { CiVideoOn } from 'react-icons/ci'
 import { FaYinYang } from 'react-icons/fa'
-import { GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
+import { GiBoxingGlove, GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
 import { PiParkDuotone } from 'react-icons/pi'
 
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 
 const trainingCards = [
@@ -18,7 +22,7 @@ const trainingCards = [
     info: '30 Min OR 60 Min Sessions',
 
     image: '/private.jpg',
-    icon: <GiWhistle className='size-6 text-gray-500' />,
+    icon: <GiWhistle className='size-6 text-dark-100' />,
     href: 'https://calendly.com/nerdsfighting/private-coaching'
   },
 
@@ -70,7 +74,7 @@ export const About = () => {
       id='about'
       className='container relative my-16 min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
     >
-      <div className='w-full rounded-lg bg-gray-700/20 p-6 py-24 shadow-2xl shadow-gray-900'>
+      <div className='w-full rounded-lg bg-dark-100/20 p-6 py-24 shadow-2xl shadow-dark-100'>
         <div className='relative flex translate-y-24 flex-col items-center justify-center'>
           <div className='absolute -top-10 z-10 opacity-90'>
             <Image
@@ -91,35 +95,102 @@ export const About = () => {
               Train for Life
             </p>
 
-            <div className='my-12 h-full max-w-2xl rounded-3xl border border-gray-500/20 bg-zinc-900/70 drop-shadow'>
-              <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='text-left text-xl font-bold text-white dark:text-white'>
-                  Train For Life{' '}
+            <div className='my-12 h-full max-w-2xl rounded-3xl border border-dark-100/20 bg-zinc-900/70 drop-shadow'>
+              <div className='flex w-full flex-col items-center justify-center p-6 text-left'>
+                <strong className='md:text-md p-1 text-left font-genos text-lg leading-8 text-white dark:text-white'>
+                  We Are {/* <span className=''>Kickboxing Club</span> */}
+                </strong>
+                <p className='my-6'>
+                  <span className='gap-3 px-2 font-logo text-2xl font-bold tracking-tighter text-emerald-400'>
+                    Nerds Fighting
+                  </span>{' '}
+                  Your premier destination for quality kickboxing instruction
+                  and training. Unlock your potential with strategic,
+                  intelligent training designed for lifelong improvement and
+                  health. We believe that your mind is your most powerful asset.
+                  Whether you’re new or continuing your kickboxing journey, want
+                  to defend yourself or someone else, aiming to refine your
+                  technique as an experienced fighter or you just want to get
+                  fit with the most interactive and dynamic workout for your
+                  body, our highly-rated gym provides a friendly environment for
+                  everyone.
+                  <br />
+                  {/* Kickboxing is almost to directly or indirectly improve your
+                  life in almost any area you can think of. We specialize in
+                  intelligent and safe training methods, focusing on the
+                  physical, mental, and cognitive benefits that kickboxing
+                  offers. At Nerds Fighting, we believe in a holistic approach
+                  to martial arts, blending physical strength with mental acuity
+                  to achieve balance and enter the flow state. We emphasize the
+                  development of high fight IQ through understanding body
+                  mechanics and fight logic. */}
+                  <br />
+                  Join us to experience world-class instruction that not only
+                  enhances your self-defense skills but also enriches your
+                  understanding the mechanics of your technique. Take your
+                  health, fitness, and mental sharpness to new heights with us.
+                  Train Smart. Train Safe. Train for Life.
                 </p>
-                <div>
-                  <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    <Separator className='my-6' />
-                    <span className='gap-3 font-bold text-emerald-500'>
-                      Nerds Fighting
-                    </span>{' '}
-                    is about developing people through the art of Boxing and
-                    Muay Thai kickboxing. Our vision is to provide quality Muay
-                    Thai and Boxing training that will leave you stronger,
-                    healthier, more confidence with the skills of a fighter. We
-                    have an approach to fighting that emphasizes technique,
-                    strategy and skills over brute force and speed. Instead of
-                    simply over powering your opponent, we want you to
-                    methodically break them down. Whether your goal is to fight
-                    in the ring someday, protect yourself on the street, or just
-                    enjoy want to get in shape while having fun doing it, we
-                    have something for you.
+              </div>
+            </div>
+          </div>
+
+          {/* <p className='mt-6 max-w-[700px] text-dark-100 md:text-xl'>
+                  Whether you're a beginner looking to get fit or an experienced
+                  fighter aiming to refine your skills, our programs are
+                  designed to challenge your body and mind, helping you achieve
+                  your full potential.
+                </p> */}
+          {/* <p className="">
+                Throughout the decades of training experience, I
+                  would notice a very specific type of fighter who wasn't always the biggest or fastest that would beat every
+                  other fighter in the gym. It wasn&apos;t the strongest,
+                  fastest, or most athletic. It was the nerds. The nerds were
+                  the ones who would take notes, ask questions, and analyze
+                  every detail of their training. They would study the game,
+                  watch videos, and read books on the subject. They would break
+                  down the techniques and strategies of the best fighters in the
+                  world and apply them to their own training. They would learn
+                  from their mistakes and constantly seek to improve. They were
+                  the ones who would outsmart their opponents and win fights
+                  they had no business winning. It was a simple observation to
+                  myself at the time that could&apos;ve been easily overlooked
+                  because it had nothing to do with physical prowess or natural
+                  talent. There was a major gap As nerds we could not
+                  observation to myself at the time that could&apos;ve been
+                  easily overlooked because it had nothing to do with physical
+                  prowess or natural talent. There was a major gap As nerds we
+                  could not help but We’ve created a kickboxing experience from
+                  an approach that us merges the nerd tendencies to digest and
+                  with physical training, giving you an edge both in and out of
+                  the ring. Our program is designed for those who appreciate a
+                  thoughtful approach to martial arts, where strategy and
+                  technique are just as important as strength and speed We offer
+                  a wide range of classes for all levels of skill.
+                </p> */}
+
+          <div id='services' className='w-full py-12 md:py-24 lg:py-32'>
+            <div className='container px-4 md:px-6'>
+              <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
+                Our Services
+              </h2>
+              <div className='mt-8 grid gap-8 md:grid-cols-2'>
+                <div className='flex flex-col items-center text-center'>
+                  <Swords className='mb-4 h-12 w-12' />
+                  <h3 className='text-2xl font-bold'>Muay Thai</h3>
+                  <p className='mt-2 text-dark-100'>
+                    Learn the art of eight limbs with our expert Muay Thai
+                    coaches. Develop striking skills, clinch work, and build
+                    unparalleled conditioning.
                   </p>
-                  <p className='md:text-md p-1 font-genos text-lg leading-8 text-white dark:text-white'>
-                    Ego&apos;s are checked at the door. No bullies or tough guys
-                    here. Our Coaches are there to guide you through training so
-                    that you are always learning and always improving. Join us
-                    for a free week trial period. We&apos;re a new club and we
-                    look forward to training with you.
+                </div>
+                <div className='flex flex-col items-center text-center'>
+                  <GiBoxingGlove className='mb-4 h-12 w-12' />
+                  <h3 className='text-2xl font-bold'>Boxing</h3>
+                  <p className='mt-2 text-dark-100'>
+                    Master the sweet science of boxing. Improve your footwork,
+                    develop devastating combinations, and enhance your defensive
+                    skills.
                   </p>
                 </div>
               </div>

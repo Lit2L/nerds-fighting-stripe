@@ -57,7 +57,7 @@ const faqData = [
 
 export function FaqSection() {
   return (
-    <section className='mx-auto max-w-4xl rounded-md bg-neutral-950/80 p-6 text-emerald-50 shadow-2xl shadow-emerald-600/50'>
+    <section className='container mx-auto max-w-4xl rounded-md bg-neutral-950/80 p-6 text-emerald-50 shadow-2xl shadow-emerald-600/50'>
       <HeaderSection
         label='FAQ'
         title='Frequently Asked Questions'

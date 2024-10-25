@@ -24,6 +24,7 @@ export type HomeLinks = {
 }
 
 export type NavItem = {
+  id: number
   title: string
   href: string
   badge?: number

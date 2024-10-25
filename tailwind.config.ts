@@ -106,7 +106,7 @@ const config = {
         }
       },
       animation: {
-        'text-gradient': 'text-gradient 1.3s linear infinite',
+        'text-gradient': 'text-gradient 5.3s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         grid: 'grid 25s linear infinite'

@@ -60,10 +60,9 @@ export default function NavMobile() {
       >
         <ul className='flex translate-y-36 flex-col p-12 indent-20'>
           {links &&
-            links.length > 0 &&
-            links.map(({ title, href }) => (
+            links.map(({ title, id, href }) => (
               <>
-                <li key={href} className='py-3'>
+                <li key={id} className='py-3'>
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}

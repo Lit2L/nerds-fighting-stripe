@@ -35,7 +35,7 @@ export const ModeToggle: FC = () => {
       {isDarkMode ? (
         <IconButton
           key='light-mode'
-          className='hover:text-primary-brand text-dark-50 hover:text-dark-500 dark:text-dark-50 dark:hover:text-dark-200 overflow-hidden'
+          className='hover:text-primary-brand overflow-hidden text-dark-50 hover:text-dark-500 dark:text-dark-50 dark:hover:text-dark-200'
           onClick={toggleTheme}
         >
           <MdOutlineLightMode title='Light mode' size={24} />
@@ -43,7 +43,7 @@ export const ModeToggle: FC = () => {
       ) : (
         <IconButton
           key='dark-mode'
-          className='hover:text-primary-brand text-dark-50 hover:text-dark-500 dark:text-dark-50 dark:hover:text-dark-50 overflow-hidden'
+          className='hover:text-primary-brand overflow-hidden text-dark-50 hover:text-dark-500 dark:text-dark-50 dark:hover:text-dark-50'
           onClick={toggleTheme}
         >
           <MdOutlineDarkMode title='Dark mode' size={24} />

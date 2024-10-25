@@ -64,6 +64,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background font-genos text-foreground;
+    @apply font-genos bg-background text-foreground;
   }
 }

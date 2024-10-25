@@ -18,9 +18,9 @@ import { Separator } from '@/components/ui/separator'
 const trainingCards = [
   {
     id: 0,
-    title: 'Private Lessons',
+    title: 'Private Coaching',
     description:
-      'Accelerate your skills with Private lessons with Coach Larry. Private lessons are customized to fit your individual needs or goals for yourself.   training type Tailor your training to accelerate your progression towards your goals.',
+      'Learning technique through private lessons with an experienced coach is a great way accelerate your abilities. Private lessons are customized to fit your individual needs or goals for yourself.   training type Tailor your training to accelerate your progression towards your goals.',
     info: '30 Min OR 60 Min Sessions',
 
     image: '/private.jpg',
@@ -32,7 +32,7 @@ const trainingCards = [
     id: 1,
     title: 'Video Analysis',
     description:
-      'Accelerate your progress with visual feedback. Our instructors guide you through sessions to pinpoint areas for improvement and deepen your understanding of fight mechanics.',
+      'Visually analyze your technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of body mechanics to help make rapid progress toward your goals.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
     image: '/10.jpg',
     icon: <CiVideoOn className='size-6 text-red-700' />,
@@ -72,12 +72,16 @@ const trainingCards = [
 
 export const Training = () => {
   return (
+    // <section
+    //   id='training'
+    //   className='container relative my-16 min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
+    // >
     <section
-      id='about'
-      className='container relative my-16 min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
+      id='training'
+      className='container relative min-h-full w-full bg-[radial-gradient(circle_400px_at_50%_375px,#181818,transparent)] font-genos dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)]'
     >
-      <div className='w-full rounded-lg bg-gray-700/20 p-6 py-24 shadow-2xl shadow-gray-900'>
-        <div className='flex w-full flex-col items-center justify-center gap-12'>
+      <div className='w-full rounded-lg bg-gray-500/50 px-6 py-6 shadow-2xl shadow-gray-900 md:py-24'>
+        <div className='flex w-full flex-col items-center justify-center gap-3'>
           {trainingCards.map((card) => (
             <div
               key={card.id}
@@ -85,7 +89,7 @@ export const Training = () => {
             >
               {card.id % 2 === 0 ? (
                 <div className='flex w-full flex-col items-center justify-center gap-16 bg-transparent md:max-w-2xl md:flex-row'>
-                  <div className='flex items-center justify-center md:w-[350px]'>
+                  <div className='flex w-[350px] items-center justify-center'>
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={card.image}
@@ -127,7 +131,7 @@ export const Training = () => {
                       {card.description}
                     </p>
                   </div>
-                  <div className='flex items-center justify-center md:w-[350px]'>
+                  <div className='flex w-[350px] items-center justify-center'>
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={card.image}

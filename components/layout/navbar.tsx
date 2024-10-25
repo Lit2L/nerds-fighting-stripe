@@ -4,7 +4,6 @@ import { useContext } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
-import { useCartStore } from '@/zustand/store'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useSession } from 'next-auth/react'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -21,7 +20,6 @@ import { ModalContext } from '@/components/modals/providers'
 import { Icons } from '@/components/shared/icons'
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 
-import Cart from '../Cart'
 import Logo from '../Logo'
 import { ModeToggle } from '../ui/mode-toggle'
 
@@ -34,7 +32,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
   const scrolled = useScroll(50)
   const { data: session, status } = useSession()
   const { setShowSignInModal } = useContext(ModalContext)
-  const cartStore = useCartStore()
+
   const handleBlurOut = () => {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur()
@@ -85,57 +83,6 @@ export function NavBar({ scroll = false }: NavBarProps) {
           ) : null}
           <div className='mr-3 hidden items-center md:flex'>
             <ModeToggle />
-            <ul className='ml-3 flex items-center justify-center gap-8'>
-              <li
-                className='relative cursor-pointer text-3xl'
-                onClick={() => cartStore.toggleCart()}
-              >
-                <FiShoppingCart />
-                <AnimatePresence>
-                  {/* Required condition when a component is removed from React tree */}
-                  {cartStore.cart.length > 0 && (
-                    <motion.span
-                      animate={{ scale: 1 }}
-                      initial={{ scale: 0 }}
-                      exit={{ scale: 0 }}
-                      className='absolute bottom-4 left-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-black shadow-md'
-                    >
-                      {cartStore.cart.length}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </li>
-
-              {/* {user && (
-                <div className='dropdown dropdown-end avatar cursor-pointer'>
-                  <Image
-                    src={user?.image as string}
-                    alt={user?.name as string}
-                    width={38}
-                    height={38}
-                    className='bg-base-100 cursor-pointer rounded-full object-cover shadow'
-                    priority
-                    tabIndex={0}
-                  />
-                  <ul
-                    tabIndex={0}
-                    className='dropdown-content menu bg-base-200 rounded-box w-48 space-y-4 p-4 text-sm shadow-lg'
-                  >
-                    <Link
-                      className='hover:bg-base-100 rounded-md p-4'
-                      href={'/dashboard'}
-                      onClick={handleBlurOut}
-                    >
-                      My Orders
-                    </Link>
-                  </ul>
-                </div>
-              )} */}
-            </ul>
-            <AnimatePresence>
-              {/* Required condition when a component is removed from React tree */}
-              {cartStore.isOpen && <Cart />}
-            </AnimatePresence>
           </div>
         </div>
 

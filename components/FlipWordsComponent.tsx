@@ -5,21 +5,21 @@ import { FlipWords } from '@/components/ui/flip-words'
 export function FlipWordsComponent() {
   const words = [
     'Technique',
-    'Cardio',
-    'Fight-IQ',
-    'Cardio',
+    'Strength',
+    'Conditioning',
     'Defense',
+    'Fight-IQ',
     'Confidence'
   ]
 
   return (
-    <div className='flex w-full flex-col items-center justify-center gap-6 px-4 pt-6'>
-      <div className='mx-auto w-full text-center font-heading text-2xl tracking-tight text-emerald-950 dark:text-white sm:text-3xl'>
-        Click to Continue...
-      </div>
+    <div className='flex w-full flex-col items-center justify-center gap-6 px-4'>
+      {/* <div className='text-md mx-auto w-full text-center font-heading tracking-tight text-emerald-950 dark:text-white'>
+        Fight like a <span className='text-red-500'> Nerd</span>
+      </div> */}
 
       <div className='mx-auto flex w-96 items-center justify-center'>
-        <p className='text-center font-heading text-2xl font-semibold text-green-600 dark:text-emerald-500'>
+        <p className='text-md text-center font-heading font-semibold text-emerald-600 dark:text-emerald-500'>
           +++
         </p>
         <FlipWords words={words} />

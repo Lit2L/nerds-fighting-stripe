@@ -37,28 +37,28 @@ export const footerLinks: SidebarNavItem[] = [
   {
     title: 'Company',
     items: [
-      { title: 'About', href: '#' },
-      { title: 'Enterprise', href: '#' },
-      { title: 'Terms', href: '/terms' },
-      { title: 'Privacy', href: '/privacy' }
+      { id: 0, title: 'About', href: '/#about' },
+      { id: 1, title: 'Enterprise', href: '#' },
+      { id: 2, title: 'Terms', href: '/terms' },
+      { id: 3, title: 'Privacy', href: '/privacy' }
     ]
   },
   {
     title: 'Product',
     items: [
-      { title: 'Security', href: '#' },
-      { title: 'Customization', href: '#' },
-      { title: 'Customers', href: '#' },
-      { title: 'Changelog', href: '#' }
+      { id: 0, title: 'Security', href: '#' },
+      { id: 1, title: 'Customization', href: '#' },
+      { id: 2, title: 'Customers', href: '#' },
+      { id: 3, title: 'Changelog', href: '#' }
     ]
   },
   {
     title: 'Docs',
     items: [
-      { title: 'Introduction', href: '#' },
-      { title: 'Installation', href: '#' },
-      { title: 'Components', href: '#' },
-      { title: 'Code Blocks', href: '#' }
+      { id: 0, title: 'Introduction', href: '#' },
+      { id: 1, title: 'Installation', href: '#' },
+      { id: 2, title: 'Components', href: '#' },
+      { id: 3, title: 'Code Blocks', href: '#' }
     ]
   }
 ]

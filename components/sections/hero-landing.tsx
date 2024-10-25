@@ -12,7 +12,7 @@ export default function HeroLanding() {
   return (
     <section
       id='hero'
-      className='mx-auto h-screen w-full bg-[radial-gradient(circle_500px_at_50%_500px,#b2b2b2,transparent)] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
+      className='mx-auto h-screen w-full bg-[radial-gradient(circle_500px_at_50%_500px,#181818,transparent)] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-7xl'
     >
       <RetroGrid />
       <div className='container flex h-full w-full flex-col items-center justify-center space-y-9 text-center sm:max-w-3xl md:max-w-4xl md:space-y-16 lg:max-w-5xl xl:max-w-7xl'>
@@ -26,16 +26,10 @@ export default function HeroLanding() {
         <div className='h-32 w-48 sm:h-60 sm:w-72'>
           <Logo />
           {/* <span className='text-xl text-black'>Train For Life</span> */}
-          <div className='md:text-md mx-auto w-full text-center font-heading text-xs tracking-tight text-emerald-950 dark:text-white'>
+          <div className='md:text-md mx-auto w-full text-center font-heading text-xs tracking-tight text-white'>
             Fight like a <span className='text-xs text-red-500'> Nerd</span>
           </div>
           {/* <span className='text-xl text-dark-100 dark:text-dark-200'> */}
-          {/* Gear Up! */}
-          {/* Study the Game <br /> */}
-          {/* Nerd Out <br /> */}
-          {/* "Forge the Path" <br /> */}
-          {/* Live Fearless */}
-          {/* </span> */}
         </div>
 
         {/* <Terminal /> */}

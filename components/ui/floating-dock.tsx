@@ -174,7 +174,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className='relative flex aspect-square items-center justify-center rounded-full bg-gray-500/60 shadow-lg shadow-gray-800 dark:bg-neutral-800'
+        className='relative flex aspect-square items-center justify-center rounded-full bg-neutral-900/70 shadow-lg shadow-gray-800 dark:bg-neutral-800'
       >
         <AnimatePresence>
           {hovered && (
@@ -182,7 +182,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: '-50%' }}
               animate={{ opacity: 1, y: 0, x: '-50%' }}
               exit={{ opacity: 0, y: 2, x: '-50%' }}
-              className='absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border-gray-200 bg-dark-900 px-2 py-0.5 text-xs text-neutral-50 dark:border-neutral-900 dark:bg-neutral-300 dark:text-white'
+              className='absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border-gray-200 bg-dark-900 px-2 py-0.5 text-xs text-white dark:border-neutral-900 dark:bg-neutral-300 dark:text-black'
             >
               {title}
             </motion.div>
@@ -199,7 +199,7 @@ function IconContainer({
           style={{ width: width, height: height }}
           className='absolute left-0 w-12 translate-y-10 hover:hidden'
         >
-          <p className='mx-auto flex w-9 items-center justify-center text-center text-[7px] leading-tight opacity-70'>
+          <p className='mx-auto flex w-9 items-center justify-center text-center text-[7px] font-bold leading-tight text-white opacity-70'>
             {title}
           </p>
         </motion.div>

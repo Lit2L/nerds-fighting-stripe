@@ -24,35 +24,35 @@ export function FloatingNavDock() {
     {
       title: 'Home',
       icon: (
-        <IconHome className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <IconHome className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
       href: '/#'
     },
     {
       title: 'About',
       icon: (
-        <SquareUser className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <SquareUser className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
       href: '/#about'
     },
     {
       title: 'Training',
       icon: (
-        <MdSportsMartialArts className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <MdSportsMartialArts className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
       href: '/#training'
     },
     {
       title: 'Schedule',
       icon: (
-        <BsCalendar3 className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <BsCalendar3 className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
       href: '/#schedule'
     },
     {
       title: 'Appointment',
       icon: (
-        <GrScheduleNew className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <GrScheduleNew className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
       href: '/#book'
     },
@@ -60,9 +60,9 @@ export function FloatingNavDock() {
     {
       title: 'Location',
       icon: (
-        <FaSchool className='h-full w-full text-dark-800 dark:text-neutral-300' />
+        <FaSchool className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
-      href: 'https://www.williamsmma.com'
+      href: 'https://www.williamsmma.com/contact.html'
     },
 
     {

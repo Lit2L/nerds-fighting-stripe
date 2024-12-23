@@ -1,13 +1,5 @@
-import Image from 'next/image'
-import { Calendar, Dumbbell } from 'lucide-react'
-import { CiDumbbell, CiLocationOn } from 'react-icons/ci'
-import { FaDumbbell } from 'react-icons/fa'
-import {
-  GiBoxingGlove,
-  GiBoxingRing,
-  GiJumpingRope,
-  GiPunchingBag
-} from 'react-icons/gi'
+import { Calendar } from 'lucide-react'
+import { GiPunchingBag } from 'react-icons/gi'
 import { MdSportsMartialArts } from 'react-icons/md'
 
 import { HeaderSection } from '@/components/shared/header-section'
@@ -20,59 +12,58 @@ const classes = [
   {
     id: 1,
     title: 'Sunday',
-    description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
-    schedule: [{ id: 1, day: 'Sun', time: '6:00 AM' }]
+    description: 'Sparring Day Team Training',
+    attributes: 'Sparring, Muay Thai, Heavy Bag, Mitts & Thai Pads.',
+    schedule: [{ id: 1, day: 'Sun', time: '6:00am - 7:30am' }]
   },
   {
     id: 2,
     title: 'Monday',
-    description: 'Muay Thai',
-    level: 'All levels',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
-    schedule: [{ id: 1, day: 'Mon', time: '9:00 AM' }]
+    description: 'Fight Fit Kickboxing',
+    level: 'Beginners, Intermediate, Advanced',
+    attributes: 'Conditioning, Cardio, Kickboxing, Heavy Bag, Focus Mitts.',
+    schedule: [{ id: 1, day: 'Mon', time: '6:00am - 7:15am' }]
   },
 
   {
     id: 3,
     title: 'Wednesday',
-    level: 'All levels',
-    description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    description: 'Fight Fit Kickboxing',
+    attributes: 'Conditioning, Cardio, Kickboxing, Heavy Bag, Focus Mitts.',
     schedule: [
       {
         id: 1,
         day: 'Wed',
-        time: '9:00 AM'
+        time: '6:00am - 7:15am'
       }
     ]
   },
   {
     id: 4,
     title: 'Thursday',
-    level: 'all levels',
-    description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
+    description: 'Fight Fit Kickboxing',
+    attributes: 'Conditioning, Heavy Bag, Focus Mitts.',
     schedule: [
       {
         id: 1,
         day: 'Thurs',
-        time: '6:00 AM'
+        time: '6:00am - 7:15am'
       }
     ]
   },
   {
     id: 5,
-    title: 'Saturday',
-    level: 'All levels',
+    title: 'Friday',
     description: 'Muay Thai',
-    attributes:
-      'Muay Thai, Boxing, Conditioning, Heavy Bag, Mitts & Thai Pads.',
-    schedule: [{ id: 1, day: 'Sat', time: '8:00 AM' }]
+    attributes: 'Muay Thai, Sparring, Technique, Heavy Bag, Mitts & Thai Pads.',
+    schedule: [{ id: 1, day: 'Friday', time: '6:00am - 7:30am' }]
+  },
+  {
+    id: 6,
+    title: 'Saturday',
+    description: 'Muay Thai',
+    attributes: 'Muay Thai, Sparring, Technique, Heavy Bag, Mitts & Thai Pads.',
+    schedule: [{ id: 1, day: 'Friday', time: '6:00am - 7:30am' }]
   }
 ]
 
@@ -92,7 +83,7 @@ export function Schedule() {
               classes.map((item) => (
                 <Card
                   key={item.id}
-                  className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-neutral-500/70 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-neutral-800/70'
+                  className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-neutral-500/70 dark:bg-zinc-800 dark:shadow-neutral-800/70'
                 >
                   <CardTitle className='p-1'>
                     <div className='flex items-center justify-between gap-3'>
@@ -119,7 +110,7 @@ export function Schedule() {
                             {schedule.time}
                           </span>
 
-                          <p className='w-3/16 m-1 flex font-genos text-lg font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
+                          <p className='w-3/16 text-md m-1 flex font-genos font-bold capitalize tracking-wide text-neutral-300/90 dark:text-green-500'>
                             {item.description}
                           </p>
                         </div>

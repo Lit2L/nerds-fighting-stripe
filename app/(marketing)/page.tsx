@@ -5,17 +5,19 @@ import NewClientFormSection from '@/components/sections/new-client'
 import { Schedule } from '@/components/sections/schedule'
 import Testimonials from '@/components/sections/testimonials'
 import { Training } from '@/components/sections/training'
+import { TrainingCards } from '@/components/sections/TrainingCards'
 
 export default function IndexPage() {
   return (
     <div className='mx-auto min-h-screen'>
       <HeroLanding />
-      <Training />
-      <About />
-      <FaqSection />
+      {/* <Training /> */}
+      <TrainingCards />
+      {/* <About /> */}
+      {/* <FaqSection /> */}
       <Schedule />
       <Testimonials />
-      <NewClientFormSection />
+      {/* <NewClientFormSection /> */}
     </div>
   )
 }

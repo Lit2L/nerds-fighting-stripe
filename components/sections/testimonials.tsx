@@ -9,7 +9,7 @@ export default function Testimonials() {
       <div className='container my-24 flex max-w-6xl flex-col gap-10 rounded-lg bg-neutral-800/30 py-24 font-genos shadow-2xl shadow-gray-800 dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)] sm:gap-y-16 md:columns-2'>
         <HeaderSection
           label='Testimonials'
-          title='Read our members reviews'
+          title='What Our Members Say'
           subtitle='We love and appreciate your reviews! Thank you!'
         />
 

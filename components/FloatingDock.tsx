@@ -1,19 +1,8 @@
-import Image from 'next/image'
-import { LinkedInLogoIcon } from '@radix-ui/react-icons'
-import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2
-} from '@tabler/icons-react'
-import { GalleryThumbnails, SquareUser, TrophyIcon } from 'lucide-react'
+import { IconHome } from '@tabler/icons-react'
 import { BsCalendar3 } from 'react-icons/bs'
 import { FaSchool } from 'react-icons/fa6'
 import { GrScheduleNew } from 'react-icons/gr'
 import { MdSportsMartialArts } from 'react-icons/md'
-import { PiReadCvLogoFill } from 'react-icons/pi'
 
 import { FloatingDock } from '@/components/ui/floating-dock'
 
@@ -28,19 +17,19 @@ export function FloatingNavDock() {
       ),
       href: '/#'
     },
-    {
-      title: 'About',
-      icon: (
-        <SquareUser className='h-full w-full text-dark-100 dark:text-neutral-300' />
-      ),
-      href: '/#about'
-    },
+    // {
+    //   title: 'About',
+    //   icon: (
+    //     <SquareUser className='h-full w-full text-dark-100 dark:text-neutral-300' />
+    //   ),
+    //   href: '/#about'
+    // },
     {
       title: 'Training',
       icon: (
         <MdSportsMartialArts className='h-full w-full text-dark-100 dark:text-neutral-300' />
       ),
-      href: '/#training'
+      href: '#training'
     },
     {
       title: 'Schedule',

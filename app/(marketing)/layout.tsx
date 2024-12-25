@@ -8,7 +8,7 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='relative min-h-screen w-full overflow-x-hidden'>
+    <div className='relative min-h-screen w-full max-w-full'>
       <header className='fixed inset-x-0 top-0 z-40 h-20 bg-gradient-to-bl from-emerald-500/90 via-emerald-400/70 to-emerald-600/95'>
         <NavBar scroll={true} />
       </header>

@@ -5,7 +5,7 @@ import { HeaderSection } from '@/components/shared/header-section'
 
 export default function Testimonials() {
   return (
-    <section id='testimonials'>
+    <section id='testimonials' className='w-full bg-[#27272a]'>
       <div className='container my-24 flex max-w-6xl flex-col gap-10 rounded-lg bg-neutral-800/30 py-24 font-genos shadow-2xl shadow-gray-800 dark:bg-[radial-gradient(circle_350px_at_50%_350px,#14443780,transparent)] sm:gap-y-16 md:columns-2'>
         <HeaderSection
           label='Testimonials'

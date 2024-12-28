@@ -6,12 +6,11 @@ export function FlipWordsComponent() {
   const words = [
     'Chill & Safe Environment',
     'No-Egos & No Meatheads',
-    'Learn Technique',
-    'Get Stronger',
+    'Learn Proper Technique & Form',
     'Improve Cardio & Conditioning',
-    'Defend Yourself Against Bullies',
-    'Increase Fight-IQ & Strategy',
-    'Level Up Confidence Level'
+    'Develop Toughness & Resilience',
+    'Increase Strategy & Fight-IQ',
+    'Become Confident in Yourself'
   ]
 
   return (

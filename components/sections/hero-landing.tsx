@@ -16,7 +16,7 @@ export default function HeroLanding() {
     >
       <div className='flex h-full w-full flex-col items-center justify-center space-y-9 border-4 pt-20 text-center sm:max-w-3xl md:max-w-4xl md:space-y-16 lg:max-w-5xl xl:max-w-7xl'>
         <Badge className='md:text-md -translate-y-3 rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-center font-heading text-[9px] uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide md:text-xs'>
-          Kickboxing & Martial Arts Club
+          Top Kickboxing Training Club
         </Badge>
         <GradualSpacing
           className='text-center font-logo font-bold -tracking-widest text-black dark:text-white md:leading-[5rem]'
